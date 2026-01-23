@@ -1,0 +1,12 @@
+/*
+media queries only
+*/
+
+/* Mobile */
+@media (max-width: 576px) {}
+
+/* Tablet */
+@media (max-width: 768px) {}
+
+/* Laptop */
+@media (max-width: 992px) {}
