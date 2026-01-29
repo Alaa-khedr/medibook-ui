@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBook | Profile Management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="dashboard.html">
+                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
+                                class="avatar-md" alt="Profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4" style="max-width: 800px;">
+
+        <div class="mb-4">
+            <a href="dashboard.html" class="text-decoration-none text-muted mb-2 d-inline-block fw-medium">
+                <i class="fa-solid fa-chevron-left fa-xs me-1"></i> Profile
+            </a>
+            <h4 class="fw-bold text-primary-custom">Profile Management</h4>
+            <p class="text-muted">Review and update your profile information.</p>
+        </div>
+
+        <div class="custom-card mb-4">
+            <div class="profile-header-section">
+                <img src="https://ui-avatars.com/api/?name=Ahmed+Samir&background=random&size=200"
+                    class="profile-img-xl" alt="Dr Profile">
+                <div>
+                    <h5 class="fw-bold mb-1">Dr. Ahmed Samir</h5>
+                    <p class="text-muted mb-1 small">+20 1012345678</p>
+                    <p class="text-muted mb-1 small">dr.ahmed.samir@email.com</p>
+                    <a href="#" class="change-photo-link">Change Profile Photo</a>
+                </div>
+            </div>
+
+            <hr class="text-muted opacity-25 my-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-bold mb-0">Short Bio</h6>
+                <div class="d-flex align-items-center">
+                    <span class="toggle-label on">ON</span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input custom-toggle" type="checkbox" role="switch" checked>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <textarea class="form-control bio-textarea" rows="4"
+                    placeholder="Tell us about yourself and your medical experience..."></textarea>
+            </div>
+
+            <div class="save-btn-container">
+                <button class="btn btn-primary-custom px-5">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="availability-card border-primary-subtle border-start border-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-bold mb-0">Monday</h6>
+                <div class="d-flex align-items-center">
+                    <span class="toggle-label on">ON</span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input custom-toggle" type="checkbox" role="switch" checked>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time-slot-row">
+                <span class="fw-medium text-dark">09:00 AM to 12:00 PM</span>
+                <div class="d-flex gap-2">
+                    <button class="action-icon-btn"><i class="fa-solid fa-pencil fa-xs"></i></button>
+                    <button class="action-icon-btn delete"><i class="fa-regular fa-trash-can fa-xs"></i></button>
+                </div>
+            </div>
+
+            <div class="time-slot-row">
+                <span class="fw-medium text-dark">02:00 PM to 05:00 PM</span>
+                <div class="d-flex gap-2">
+                    <button class="action-icon-btn"><i class="fa-solid fa-pencil fa-xs"></i></button>
+                    <button class="action-icon-btn delete"><i class="fa-regular fa-trash-can fa-xs"></i></button>
+                </div>
+            </div>
+
+            <div class="mt-2 text-end">
+                <button class="btn-add-slot"><i class="fa-solid fa-plus"></i> Add Time Slot</button>
+            </div>
+        </div>
+
+        <div class="availability-card border-primary-subtle border-start border-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="fw-bold mb-0">Tuesday</h6>
+                <div class="d-flex align-items-center">
+                    <span class="toggle-label on">ON</span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input custom-toggle" type="checkbox" role="switch" checked>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time-slot-row">
+                <span class="fw-medium text-dark">09:00 AM to 12:00 PM</span>
+                <div class="d-flex gap-2">
+                    <button class="action-icon-btn"><i class="fa-solid fa-pencil fa-xs"></i></button>
+                    <button class="action-icon-btn delete"><i class="fa-regular fa-trash-can fa-xs"></i></button>
+                </div>
+            </div>
+
+            <div class="mt-2 text-end">
+                <button class="btn-add-slot"><i class="fa-solid fa-plus"></i> Add Time Slot</button>
+            </div>
+        </div>
+
+        <div class="availability-card disabled">
+            <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold mb-0 text-muted">Saturday</h6>
+                <div class="d-flex align-items-center">
+                    <span class="toggle-label off">OFF</span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input custom-toggle" type="checkbox" role="switch">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability-card disabled">
+            <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold mb-0 text-muted">Sunday</h6>
+                <div class="d-flex align-items-center">
+                    <span class="toggle-label off">OFF</span>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input custom-toggle" type="checkbox" role="switch">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-muted small mt-4 mb-3">
+            Need help? <a href="#" class="text-decoration-none">Contact support <i
+                    class="fa-solid fa-chevron-right fa-xs"></i></a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
