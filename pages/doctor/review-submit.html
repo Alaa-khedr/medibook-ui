@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>Review&Submit</title>
+</head>
+
+<body>
+    <!-- start Review&Submit -->
+    <section class="review-submit shadow">
+        <div class="container">
+            <div class="row">
+                <h2>Review&Submit</h2>
+                <p class="review-submit-text">Review the information below before submitting your application.</p>
+                <div class="doctor-profile shadow-sm">
+                    <div class="profile-header d-flex justify-content-between align-items-center p-3">
+                        <h5 class="m-0"><i class="fa-solid fa-book me-2"></i>Doctor Profile</h5>
+                        <div class="edit">Edit</div>
+                    </div>
+
+                    <div class="profile-body p-3 text-start">
+                        <div class="doctor-info d-flex align-items-center gap-3 mb-3">
+                            <div class="doctor-image">
+                                <img src="/assets/images/doctor/doctor.svg" alt="doctor-image">
+                            </div>
+                            <div class="doctor-info-text">
+                                <div id="doctor-name" class="fw-bold">Dr. Ahmed Samir</div>
+                                <div id="doctor-speciality">Cardiologist</div>
+                                <div id="doctor-address">City Medical Center</div>
+                            </div>
+                        </div>
+                        <div class="breaker-light mb-3"></div>
+                        <div id="doctor-bio">Tell us a bit about yourself and your medical experience...</div>
+                    </div>
+                </div>
+                <div class="consultation-type-review shadow-sm mb-4 mt-3">
+                    <div class="profile-header d-flex justify-content-between align-items-center p-3">
+                        <h5 class="m-0"><i class="fa-solid fa-desktop me-2"></i>Consultation Type</h5>
+                        <div class="edit">Edit</div>
+                    </div>
+
+                    <div class="profile-body p-3 text-start">
+                        <div class="type-display d-flex align-items-center gap-3">
+                            <div class="icons-wrapper d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-desktop type-icon"></i>
+                                <span class="plus-sign">+</span>
+                                <i class="fa-solid fa-building type-icon"></i>
+                            </div>
+                            <div class="vertical-divider"></div>
+                            <div class="type-text">
+                                <span class="status-label">Both</span>
+                                <span class="sub-text">(Online & Offline)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="availability-review shadow-sm mb-4">
+                    <div class="profile-header d-flex justify-content-between align-items-center p-3">
+                        <h5 class="m-0"><i class="fa-solid fa-calendar-days me-2"></i>Availability</h5>
+                        <div class="edit">Edit</div>
+                    </div>
+
+                    <div class="profile-body p-3 text-start">
+                        <div class="schedule-list">
+                            <div class="day-schedule-row d-flex align-items-start py-2">
+                                <div class="day-name fw-bold">Saturday</div>
+                                <div class="time-slots-list d-flex flex-wrap gap-2">
+                                    <span class="time-badge">09:00 AM - 12:00 PM</span>
+                                    <span class="time-badge">02:00 PM - 05:00 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="breaker-light"></div>
+
+                            <div class="day-schedule-row d-flex align-items-start py-2">
+                                <div class="day-name fw-bold">Sunday</div>
+                                <div class="time-slots-list d-flex flex-wrap gap-2">
+                                    <span class="time-badge">10:00 AM - 03:00 PM</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-review shadow-sm mb-4">
+                    <div class="profile-header d-flex justify-content-between align-items-center p-3">
+                        <h5 class="m-0"><i class="fa-solid fa-dollar-sign me-2"></i>Pricing & Payment Info</h5>
+                        <div class="edit">Edit</div>
+                    </div>
+
+                    <div class="profile-body p-3 text-start">
+                        <div class="payment-details">
+                            <div class="fee-row mb-2">
+                                <span class="label">Online Consultation Fee:</span>
+                                <span class="value fw-bold ms-1">EGP 300</span>
+                            </div>
+                            <div class="fee-row mb-3">
+                                <span class="label">Offline Consultation Fee:</span>
+                                <span class="value fw-bold ms-1">EGP 500</span>
+                            </div>
+
+                            <div class="breaker-light mb-3"></div>
+
+                            <div class="bank-info">
+                                <div class="info-item mb-1">
+                                    <span class="label">Bank:</span>
+                                    <span class="value ms-1">ABC Bank</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">IBAN:</span>
+                                    <span
+                                        class="value iban-text ms-1">EG-00-0000-0000-0000-0000-0000-0000-0000-0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="button save-button shadow mb-3"
+                    onclick="window.location.href='pending-approval.html'">Submit Application</button>
+                <div class="need-help  text-center">
+                    Need help?<a href="" class="support"> Contact Support ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Review&Submit -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

@@ -4,6 +4,54 @@ variables,
 buttons,
 forms
 */
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #EBF0F8;
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   min-height: 100vh;
+   margin: 0;
+   padding: 40px 10px;
+}
+
+h2 {
+   color: #153C79;
+   text-align: center;
+}
+
+i {
+   color: #116FDE !important;
+}
+/* stepper */
+
+/* save button  */
+.save-button {
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 20px;
+   color: white;
+   background-color: #116FDE;
+   border: none;
+   outline: none;
+}
+
+.save-button:hover {
+   background-color: #1171dece;
+}
+
+.save-button:active {
+   transform: scale(0.95);
+}
+
+.need-help {
+   font-size: 14px;
+}
 
 * {
    margin: 0;
@@ -31,6 +79,798 @@ forms
    --admin-border-color: #d1d5db;
 }
 
+
+/*start doctor signup*/
+.doctor-signup__form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 0 20px;
+}
+
+.doctor-signup__form .doctor-image {
+   /* transform: translateY(-50%); */
+   margin-top: -75px;
+}
+
+.doctor-signup__form .doctor-image img {
+   width: 150px;
+   height: auto;
+
+}
+
+.doctor-signup__form .breaker {
+   width: 100%;
+   height: 1px;
+   background-color: #788FB8;
+   margin: 25px 0;
+
+}
+
+.doctor-signup__form .input-group {
+   border: 1px solid #788FB8;
+   border-radius: 8px;
+}
+
+.doctor-signup__form .input-group-text {
+   background: transparent;
+   border: none;
+   color: #788FB8;
+}
+
+.doctor-signup__form .input-group .form-control {
+   border: none;
+   box-shadow: none;
+   /* color: #788FB8; */
+   margin-left: -10px !important;
+}
+
+.doctor-signup__form .input-group .form-control::placeholder {
+   color: #788FB8;
+   opacity: 0.6;
+}
+
+.doctor-signup__form .doctor-signup-create-account {
+   width: 100%;
+   padding: 20px;
+   border-radius: 20px;
+   color: white;
+   background-color: #116FDE;
+   border: none;
+   outline: none;
+}
+
+.doctor-signup__form .doctor-signup-create-account:hover {
+   background-color: #116FDEce;
+}
+
+.doctor-signup__form .doctor-signup-create-account:active {
+   transform: scale(0.95);
+}
+
+/*end doctor signup*/
+
+/* start doctor profile setup */
+.doctor-profile__setup {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+.doctor-profile__setup .doctor-image {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
+}
+
+.doctor-profile__setup .doctor-image .upload-image {
+   background-color: #EBF0F8;
+   padding: 0 10px;
+   color: #153C79;
+   border: 1px solid #788FB8;
+   border-radius: 10px;
+
+}
+
+.doctor-profile__setup .doctor-image .upload-image:hover {
+   background-color: #EBF0F8;
+   opacity: 0.8;
+}
+
+.doctor-profile__setup .doctor-image .upload-image:active {
+   transform: scale(0.95);
+}
+
+.doctor-profile__setup img {
+   max-width: 100px;
+}
+
+.doctor-profile__setup .input-group {
+   border: 1px solid #788FB8;
+   border-radius: 8px;
+   padding: 0;
+}
+
+.doctor-profile__setup .input-group-text {
+   background: transparent;
+   border: none;
+   color: #116FDE;
+}
+
+.doctor-profile__setup .input-group .form-select,
+.doctor-profile__setup .input-group .form-control {
+   border: none;
+   box-shadow: none;
+}
+
+.doctor-profile__setup .short-bio,
+.doctor-profile__setup .clinic {
+   color: #153C79;
+   padding: 0;
+}
+
+.doctor-profile__setup .short-bio #short-bio {
+   width: 100%;
+   height: 100px;
+   font-size: 16px;
+   padding: 5px;
+   margin-top: -30px;
+   border: 1px solid #788FB8;
+   border-radius: 8px;
+}
+
+.doctor-profile__setup .clinic .optinal {
+   font-size: 12px;
+   color: grey;
+}
+
+.doctor-profile__setup .clinic .input-group {
+   margin-top: -10px;
+}
+
+/* end doctor profile setup  */
+
+/* start Consultation setup  */
+.consultation-setup {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+.consultation-setup .consultations-types {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.consultation-setup .consultations-types .type {
+   height: fit-content;
+   border: 1px solid #788FB8;
+   border-radius: 10px;
+   padding: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.consultation-setup .consultations-types .type:hover {
+   opacity: 0.8;
+}
+
+.consultation-setup .consultations-types .type:last-child {
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content: center;
+}
+
+.consultation-setup .consultations-types .type i {
+   font-size: 48px;
+   color: #116FDE;
+}
+
+.consultation-setup .consultations-types .type .type-text {
+   color: #153C79;
+   margin-bottom: 0;
+   margin-top: 10px;
+}
+
+/* active status */
+.consultation-setup .consultations-types .type.active {
+   border: 3px solid #116FDE;
+   position: relative;
+}
+
+.consultation-setup .consultations-types .type.active::after {
+   content: "\2713";
+   position: absolute;
+   top: -10px;
+   right: -10px;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: #116FDE;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+   font-weight: bold;
+   border: 2px solid white;
+}
+
+/* end Consultation setup  */
+
+/* start availability setup */
+.availability-setup {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+.availability-setup .visit-type {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   gap: 15px;
+   border: 1px solid #788FB8;
+   border-radius: 8px;
+   width: fit-content;
+   margin: 0 auto 15px auto;
+   color: #116FDE;
+   cursor: pointer;
+   padding: 0;
+
+}
+
+.availability-setup .visit-type span {
+   font-size: 16px;
+   color: #788FB8;
+}
+
+.availability-setup .visit-type .online {
+   padding-left: 10px;
+   border-top-left-radius: 8px;
+   border-bottom-left-radius: 8px;
+}
+
+.availability-setup .visit-type .offline {
+   padding-right: 10px;
+   border-top-right-radius: 8px;
+   border-bottom-right-radius: 8px;
+}
+
+.availability-setup .visit-type .online:hover,
+.availability-setup .visit-type .offline:hover {
+   opacity: 0.60;
+}
+
+.availability-setup .visit-type .online:active,
+.availability-setup .visit-type .offline:active {
+   transform: scale(0.95);
+}
+
+.availability-setup .visit-type .online.active,
+.availability-setup .visit-type .offline.active {
+   background-color: #7890b8a3;
+   padding: 0 10px;
+}
+
+.availability-setup .availability-text {
+   font-size: 14px;
+   color: #788FB8;
+}
+
+.availability-setup .add-time {
+   border: 1px solid #788FB8;
+   max-width: fit-content;
+   padding: 5px 10px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.availability-setup .add-time:hover {
+   opacity: 0.65;
+}
+
+.availability-setup .add-time:active {
+   transform: scale(0.95);
+}
+
+.availability-setup .add-time i {
+   color: #116FDE;
+}
+
+/* حاوية الفترة الزمنية */
+.time-slot-container {
+   background-color: white;
+   /* لتظهر فوق الخلفية الرمادية EBF0F8 */
+   border: 1px solid #EBF0F8;
+   border-radius: 12px;
+   width: 100%;
+   /* max-width: 500px; أو حسب حجم الـ card عندك */
+
+}
+
+/* تنسيق الوقت */
+.time-text {
+   color: #153C79;
+   /* اللون الداكن الموحد في h2 */
+   font-weight: 500;
+   font-size: 18px;
+}
+
+.time-text .ampm {
+   color: #116FDE;
+   /* اللون الأزرق الأساسي */
+}
+
+.to-text {
+   color: #788FB8;
+   /* لون الـ placeholder والـ breaker عندك */
+   font-size: 16px;
+}
+
+/* تنسيق الأيقونات (الدوائر) */
+.action-icon {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   background-color: #EBF0F8;
+   /* لون الخلفية العام */
+   color: #116FDE;
+   transition: 0.3s;
+}
+
+.action-icon:hover {
+   background-color: #d1d9e9;
+}
+
+/* أيقونة الحذف باللون الأحمر */
+.action-icon.delete {
+   color: #dc3545;
+   background-color: #fce8e9;
+}
+
+.action-icon.delete:hover {
+   background-color: #f8d7da;
+}
+
+/* end availability setup */
+
+/* start pricing setup */
+.pricing-setup {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+.pricing-setup .pricing-setup-text,
+.pricing-setup .online-fees-text,
+.pricing-setup .offline-fees-text {
+   font-size: 14px;
+   color: #788FB8;
+}
+
+.pricing-setup .online-fees-text i,
+.pricing-setup .offline-fees-text i {
+   font-size: 18px;
+   color: #116FDE;
+}
+
+.pricing-setup #fee {
+   background-color: transparent;
+   border-right: none;
+   color: #116FDE;
+}
+
+/* end pricing setup */
+
+/* start payment info */
+.payment-info {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+.payment-info .payment-text {
+   font-size: 14px;
+   color: #788FB8;
+}
+
+.payment-info .input-group-text {
+   background-color: transparent;
+   color: #116FDE;
+}
+
+/* end payment info */
+/* start Review&Submit */
+.review-submit {
+   /* التنسيق الأساسي للحاوية */
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   border-radius: 20px;
+   margin: 20px;
+   background-color: white;
+   width: 100%;
+   max-width: 600px;
+   border-radius: 20px;
+   padding: 30px;
+   /* حذفنا position: absolute وكل توابعه */
+   position: relative;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.review-submit .doctor-profile {
+   border: 1px solid #EBF0F8;
+   border-radius: 12px;
+   overflow: hidden;
+   /* لضمان عدم خروج الألوان عن الحواف المستديرة */
+}
+
+/* Header داخل الكرت */
+.profile-header {
+   border-bottom: 1px solid #EBF0F8;
+}
+
+.review-submit .edit {
+   font-size: 14px;
+   padding: 4px 15px;
+   border: 1px solid #116FDE;
+   border-radius: 8px;
+   background-color: transparent;
+   color: #116FDE;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.review-submit .edit:hover {
+   background-color: #116FDE;
+   color: white;
+}
+
+/* نصوص الطبيب */
+#doctor-name {
+   color: #153C79;
+   font-size: 18px;
+}
+
+#doctor-speciality,
+#doctor-address {
+   color: #788FB8;
+   font-size: 14px;
+}
+
+#doctor-bio {
+   color: #788FB8;
+   font-size: 14px;
+   line-height: 1.6;
+}
+
+.breaker-light {
+   width: 100%;
+   height: 1px;
+   background-color: #f0f4f8;
+}
+
+.review-submit .doctor-image img {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: #EBF0F8;
+}
+
+/* Container styling */
+.consultation-type-review {
+   border: 1px solid #EBF0F8;
+   border-radius: 12px;
+   background-color: white;
+   overflow: hidden;
+}
+
+/* Icons & Both Text Section */
+.type-display {
+   padding: 10px 5px;
+}
+
+.type-icon {
+   font-size: 24px;
+   color: #116FDE;
+   /* اللون الأزرق المعتمد في مشروعك */
+   /* background-color: #EBF0F8; */
+   padding: 10px;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.plus-sign {
+   color: #788FB8;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+.vertical-divider {
+   width: 1px;
+   height: 40px;
+   background-color: #EBF0F8;
+   margin: 0 10px;
+}
+
+.status-label {
+   display: block;
+   color: #153C79;
+   /* لون العناوين الداكن */
+   font-weight: 600;
+   font-size: 16px;
+}
+
+.sub-text {
+   color: #788FB8;
+   font-size: 13px;
+}
+
+/* Reusing the same Edit button style from the profile setup */
+.consultation-type-review .edit {
+   font-size: 14px;
+   padding: 4px 15px;
+   border: 1px solid #116FDE;
+   border-radius: 8px;
+   background-color: transparent;
+   color: #116FDE;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.consultation-type-review .edit:hover {
+   background-color: #116FDE;
+   color: white;
+}
+
+/* Container styling */
+.availability-review {
+   border: 1px solid #EBF0F8;
+   border-radius: 12px;
+   background-color: white;
+   overflow: hidden;
+}
+
+/* Row Styling */
+.day-schedule-row {
+   gap: 20px;
+}
+
+.day-name {
+   min-width: 100px;
+   /* ضمان محاذاة كل الأيام تحت بعضها */
+   color: #153C79;
+   font-size: 15px;
+}
+
+/* Time Badges Styling */
+.time-badge {
+   background-color: #EBF0F8;
+   color: #116FDE;
+   padding: 4px 12px;
+   border-radius: 20px;
+   font-size: 13px;
+   font-weight: 500;
+   border: 1px solid rgba(17, 111, 222, 0.1);
+}
+
+.time-slots-list {
+   flex: 1;
+   /* لتأخذ باقي المساحة المتاحة في الصف */
+}
+
+/* Divider inside the card */
+.availability-review .breaker-light {
+   width: 100%;
+   height: 1px;
+   background-color: #f0f4f8;
+   margin: 5px 0;
+}
+
+/* Reuse Edit button style */
+.availability-review .edit {
+   font-size: 14px;
+   padding: 4px 15px;
+   border: 1px solid #116FDE;
+   border-radius: 8px;
+   background-color: transparent;
+   color: #116FDE;
+   cursor: pointer;
+}
+
+/* Container styling */
+.pricing-review {
+   border: 1px solid #EBF0F8;
+   border-radius: 12px;
+   background-color: white;
+   overflow: hidden;
+}
+
+/* Text Styling */
+.pricing-review .label {
+   color: #788FB8;
+   /* اللون الرمادي المائل للأزرق */
+   font-size: 14px;
+}
+
+.pricing-review .value {
+   color: #153C79;
+   /* اللون الأزرق الداكن للنصوص الأساسية */
+   font-size: 15px;
+}
+
+.iban-text {
+   word-break: break-all;
+   /* لضمان عدم خروج رقم الآيبان الطويل عن حدود الكارت في الموبايل */
+   font-family: monospace;
+   /* اختياري: لجعل الأرقام أكثر وضوحاً */
+   font-size: 13px !important;
+}
+
+/* Header Icon color specifically for pricing */
+.pricing-review .profile-header i {
+   color: #116FDE;
+}
+
+/* Divider inside the card */
+.pricing-review .breaker-light {
+   width: 100%;
+   height: 1px;
+   background-color: #f0f4f8;
+}
+
+/* Reuse Edit button style */
+.pricing-review .edit {
+   font-size: 14px;
+   padding: 4px 15px;
+   border: 1px solid #116FDE;
+   border-radius: 8px;
+   background-color: transparent;
+   color: #116FDE;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.pricing-review .edit:hover {
+   background-color: #116FDE;
+   color: white;
+}
+
+/* end Review&Submit */
+/* start pending approval */
+/* التنسيق الأساسي للقسم */
+.pending-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #EBF0F8;
+    padding: 20px;
+}
+
+/* الكارت الأبيض */
+.pending-container {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    /* تأكد من عدم وجود overflow: hidden هنا */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 50px; /* مساحة إضافية لتسمح للصورة بالخروج */
+}
+
+/* ضبط الصورة لتخرج لفوق */
+.status-image {
+    margin-top: -55px; /* القيمة السالبة ترفع الصورة خارج الكارت */
+    margin-bottom: 20px;
+}
+
+.status-image img {
+    width: 40px; /* تحكم في الحجم حسب رغبتك */
+    height: auto;
+    /* إضافة ظل خلف الصورة لتبدو وكأنها فوق الكارت */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); 
+}
+
+/* تنسيق النصوص */
+.status-title {
+    color: #153C79;
+    font-weight: 700;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.status-description {
+    color: #788FB8;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.brand-name {
+    color: #116FDE;
+    font-weight: 600;
+}
+
+/* end pending approval */
 /* ======================
    Admin Global
 ====================== */
