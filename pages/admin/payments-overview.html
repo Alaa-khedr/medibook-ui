@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Payments Overview | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a class="admin-sidebar__link" href="approved-doctors.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+                <a class="admin-sidebar__link" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialties Management
+                </a>
+                <a class="admin-sidebar__link" href="system-settings.html">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Header -->
+            <div class="admin-page-header">
+                <h1 class="admin-page-header__title">Payments Overview</h1>
+                <div class="admin-page-header__breadcrumb">Home / Payments</div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="admin-stat admin-stat--blue">
+                        <div class="admin-stat__icon">
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <div class="admin-stat__content">
+                            <span>Total Payments</span>
+                            <strong>$85,320</strong>
+                            <small>Total payments processed</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="admin-stat admin-stat--orange">
+                        <div class="admin-stat__icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <div class="admin-stat__content">
+                            <span>Platform Commission</span>
+                            <strong>$12,750</strong>
+                            <small>Commission earned</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="admin-stat admin-stat--green">
+                        <div class="admin-stat__icon">
+                            <i class="bi bi-cash-stack"></i>
+                        </div>
+                        <div class="admin-stat__content">
+                            <span>Doctor Earnings</span>
+                            <strong>$72,570</strong>
+                            <small>Payments to doctors</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Breakdown -->
+            <div class="admin-card">
+                <h3 class="admin-card__title">
+                    <i class="bi bi-bar-chart"></i> Payments Summary
+                </h3>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="admin-summary admin-summary--blue">
+                            <span>Total Payments</span>
+                            <strong>$85,320</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="admin-summary admin-summary--orange">
+                            <span>Platform Commission</span>
+                            <strong>$12,750</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="admin-summary admin-summary--green">
+                            <span>Doctor Earnings</span>
+                            <strong>$72,570</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

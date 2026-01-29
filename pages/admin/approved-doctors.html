@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Patients List | MediBook</title>
+    <title>Approved Doctors | MediBook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
@@ -45,26 +45,22 @@
                 <a class="admin-sidebar__link" href="dashboard.html">
                     <i class="bi bi-speedometer2"></i> Dashboard
                 </a>
-
-                <a class="admin-sidebar__link" href="approved-doctors.html">
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="approved-doctors.html">
                     <i class="bi bi-person-badge"></i> Doctors
                 </a>
-
-                <a class="admin-sidebar__link admin-sidebar__link--active" href="patients-list.html">
+                <a class="admin-sidebar__link" href="patients-list.html">
                     <i class="bi bi-people"></i> Patients
                 </a>
-
                 <a class="admin-sidebar__link" href="bookings-list.html">
                     <i class="bi bi-calendar-check"></i> Bookings
                 </a>
-
                 <a class="admin-sidebar__link" href="payments-overview.html">
                     <i class="bi bi-credit-card"></i> Payments
                 </a>
                 <a class="admin-sidebar__link" href="specialties-management.html">
                     <i class="bi bi-diagram-3"></i> Specialties Management
                 </a>
-                <a class="admin-sidebar__link" href="system-settings.html">
+                <a class="admin-sidebar__link">
                     <i class="bi bi-gear"></i> System
                 </a>
                 <a class="admin-sidebar__link" href="admin-profile.html">
@@ -83,10 +79,8 @@
             <!-- Page Header -->
             <div class="admin-page-header admin-page-header--with-actions">
                 <div>
-                    <h1 class="admin-page-header__title">Patients List</h1>
-                    <div class="admin-page-header__breadcrumb">
-                        Home / Patients
-                    </div>
+                    <h1 class="admin-page-header__title">Approved Doctors</h1>
+                    <div class="admin-page-header__breadcrumb">Home / Doctors</div>
                 </div>
 
                 <div class="admin-search">
@@ -98,123 +92,97 @@
             <!-- Table Card -->
             <div class="admin-card admin-table-card">
 
+                <!-- Filter Tabs -->
+                <div class="admin-tabs">
+                    <span class="admin-tab admin-tab--active">Approved</span>
+                    <span class="admin-tab">Disabled</span>
+                </div>
+
                 <table class="admin-table">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
+                            <th>Doctor Name</th>
+                            <th>Specialty</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
                             <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
+                                <a href="doctor-details.html" class="admin-user admin-user--link">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=SarahNassar" />
                                     <div>
-                                        <strong>Mohamed Ali</strong>
+                                        <strong>Dr. Sarah Nassar</strong>
+                                        <span>Pediatrician</span>
                                     </div>
                                 </a>
                             </td>
-                            <td>mohamed.ali@email.com</td>
-                            <td>+201101234567</td>
+                            <td>Pediatrician</td>
+                            <td><span class="admin-status admin-status--active">Active</span></td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Sara Hassan</strong>
+                                <a href="doctor-details.html" class="admin-user admin-user--link">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=AhmedKhaled" />
+                                    <div>
+                                        <strong>Dr. Ahmed Khaled</strong>
+                                        <span>Cardiologist</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td>sara.hassan@email.com</td>
-                            <td>+201001122233</td>
+                            <td>Cardiologist</td>
+                            <td><span class="admin-status admin-status--active">Active</span></td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Ahmed Youssef</strong>
+                                <a href="doctor-details.html" class="admin-user admin-user--link">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=RaniaHassan" />
+                                    <div>
+                                        <strong>Dr. Rania Hassan</strong>
+                                        <span>Psychiatrist</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td>ahmed.youssef@email.com</td>
-                            <td>+201221122334</td>
+                            <td>Psychiatrist</td>
+                            <td><span class="admin-status admin-status--active">Active</span></td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Lina Abdallah</strong>
+                                <a href="doctor-details.html" class="admin-user admin-user--link">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=OmarAli" />
+                                    <div>
+                                        <strong>Dr. Omar Ali</strong>
+                                        <span>Dentist</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td>lina.abdallah@email.com</td>
-                            <td>+201334455667</td>
+                            <td>Dentist</td>
+                            <td><span class="admin-status admin-status--disabled">Disabled</span></td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Mostafa Omar</strong>
+                                <a href="doctor-details.html" class="admin-user admin-user--link">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=DinaIsmail" />
+                                    <div>
+                                        <strong>Dr. Dina Ismail</strong>
+                                        <span>Dermatologist</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td>mostafa.omar@email.com</td>
-                            <td>+201556677889</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Reem Kamal</strong>
-                                </a>
-                            </td>
-                            <td>reem.kamal@email.com</td>
-                            <td>+201778899001</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Tamer Gad</strong>
-                                </a>
-                            </td>
-                            <td>tamer.gad@email.com</td>
-                            <td>+201989870123</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Yasmin Adel</strong>
-                                </a>
-                            </td>
-                            <td>yasmin.adel@email.com</td>
-                            <td>+201912345678</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Kareem Tarek</strong>
-                                </a>
-                            </td>
-                            <td>kareem.tarek@email.com</td>
-                            <td>+201623456789</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <a href="patient-details.html" class="admin-user admin-user--link">
-                                    <strong>Fatima Noor</strong>
-                                </a>
-                            </td>
-                            <td>fatima.noor@email.com</td>
-                            <td>+201734567890</td>
+                            <td>Dermatologist</td>
+                            <td><span class="admin-status admin-status--disabled">Disabled</span></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <!-- Pagination -->
                 <div class="admin-pagination">
-                    <span>1 – 10 of 120</span>
+                    <span>1 – 5 of 5</span>
                     <div class="admin-pagination__controls">
                         <button><i class="bi bi-chevron-left"></i></button>
                         <button class="active">1</button>

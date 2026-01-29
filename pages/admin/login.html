@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Login | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+
+<body class="admin-auth">
+
+    <main class="admin-login">
+        <div class="admin-login__card">
+
+            <div class="admin-login__header">
+                <div class="admin-login__icon">
+                    <i class="bi bi-gear-fill"></i>
+                </div>
+                <h1 class="admin-login__title">Admin Login</h1>
+            </div>
+
+            <form class="admin-login__form" action="dashboard.html">
+
+                <!-- Email -->
+                <div class="admin-login__field">
+                    <label class="admin-login__label">Email</label>
+                    <div class="admin-login__input-wrapper">
+                        <i class="bi bi-envelope-fill admin-login__input-icon"></i>
+                        <input type="email" class="admin-login__input" placeholder="Enter your email" />
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="admin-login__field">
+                    <label class="admin-login__label">Password</label>
+                    <div class="admin-login__input-wrapper">
+                        <i class="bi bi-lock-fill admin-login__input-icon"></i>
+                        <input type="password" class="admin-login__input" placeholder="Enter your password" />
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <button type="submit" class="admin-login__btn">
+                    Login
+                </button>
+
+                <!-- Forgot -->
+                <a href="#" class="admin-login__forgot">
+                    Forgot Password?
+                </a>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+</body>
+
+</html>

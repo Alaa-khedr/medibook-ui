@@ -3,3 +3,34 @@ navbar,
 footer,
 grids
 */
+
+/* ======================
+   Auth Layout (Login)
+====================== */
+.admin-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-login__card {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--admin-card-bg);
+    padding: 40px;
+    border-radius: 16px;
+}
+
+/* ======================
+   Admin Dashboard Layout (Reusable)
+====================== */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 32px;
+}

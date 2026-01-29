@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Doctor Application Details | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <!-- Mobile Header -->
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="doctor-applications.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+                <a class="admin-sidebar__link" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialties Management
+                </a>
+                <a class="admin-sidebar__link">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <h1 class="admin-page-header__title">Doctor Application Details</h1>
+                <div class="admin-page-header__breadcrumb">
+                    Home / Doctors / Doctor Application Details
+                </div>
+            </div>
+
+            <!-- Details Card -->
+            <div class="admin-card admin-doctor-details">
+
+                <!-- Doctor Header -->
+                <div class="admin-doctor-details__header">
+                    <div class="admin-user admin-user--large">
+                        <img src="https://api.dicebear.com/7.x/initials/svg?seed=SarahNassar" />
+                        <div>
+                            <h3>Dr. Sarah Nassar</h3>
+                            <span>Pediatrician</span>
+                            <p>Submitted on: Apr 22, 2024</p>
+                        </div>
+                    </div>
+
+                    <span class="admin-badge admin-badge--pending">Pending Review</span>
+                </div>
+
+                <!-- Sections -->
+                <div class="admin-info-section">
+                    <h4>Doctor Info</h4>
+                    <ul>
+                        <li><strong>Full Name:</strong> Dr. Sarah Nassar</li>
+                        <li><strong>Email:</strong> sarah.nassar@email.com</li>
+                        <li><strong>Phone:</strong> +201231234567</li>
+                        <li><strong>Specialty:</strong> Pediatrician</li>
+                    </ul>
+                </div>
+
+                <div class="admin-info-section">
+                    <h4>Consultation Types</h4>
+                    <p>Online & Offline</p>
+                </div>
+
+                <div class="admin-info-section">
+                    <h4>Availability</h4>
+                    <p>Monday, Wednesday, Friday — 10:00 AM – 2:00 PM</p>
+                </div>
+
+                <div class="admin-info-section">
+                    <h4>Pricing</h4>
+                    <p>Online: $40 per consultation</p>
+                    <p>Offline: $60 per consultation</p>
+                </div>
+
+                <div class="admin-info-section">
+                    <h4>Payment Info</h4>
+                    <p><strong>Bank:</strong> Main National Bank</p>
+                    <p><strong>IBAN:</strong> EG21000920067890123234567892314</p>
+                    <p><strong>Account Holder:</strong> Sarah Nassar</p>
+                </div>
+
+                <!-- Actions -->
+                <div class="admin-actions">
+                    <a href="approved-doctors.html">
+                        <button class="admin-btn admin-btn--success border-0">Approve</button>
+                    </a>
+
+                    <a href="approved-doctors.html">
+                        <button class="admin-btn admin-btn--danger border-0">Reject</button>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

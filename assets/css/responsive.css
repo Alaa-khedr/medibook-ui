@@ -2,11 +2,136 @@
 media queries only
 */
 
-/* Mobile */
-@media (max-width: 576px) {}
+/* ======================
+   Mobile Header
+====================== */
+.admin-mobile-header {
+    height: 56px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-/* Tablet */
-@media (max-width: 768px) {}
+.admin-mobile-header__toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
 
-/* Laptop */
-@media (max-width: 992px) {}
+.admin-mobile-header__title {
+    margin-left: 12px;
+    font-weight: 600;
+}
+
+/* ======================
+   Responsive Layout
+====================== */
+@media (max-width: 991px) {
+    .admin-sidebar {
+        position: fixed;
+        z-index: 1050;
+        height: 100vh;
+    }
+
+    .admin-main {
+        padding: 16px;
+    }
+}
+
+/* ======================
+   Login Responsive
+====================== */
+@media (max-width: 576px) {
+    .admin-login__card {
+        padding: 24px;
+        border-radius: 12px;
+    }
+
+    .admin-login__title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .admin-sidebar-wrapper {
+        position: fixed;
+        inset: 0;
+        z-index: 1050;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .admin-sidebar {
+        position: relative;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-page-header--with-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .admin-search {
+        width: 100%;
+    }
+
+    .admin-search input {
+        width: 100%;
+    }
+
+    /* Table → Cards */
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table,
+    .admin-table tbody,
+    .admin-table tr,
+    .admin-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-table tr {
+        padding: 16px;
+        border-bottom: 1px solid #eef0f5;
+    }
+
+    .admin-table tbody td {
+        padding: 6px 0;
+        border: none;
+    }
+
+    .admin-table td.text-end {
+        text-align: left !important;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-doctor-details__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-page-header--with-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .admin-doctor-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
