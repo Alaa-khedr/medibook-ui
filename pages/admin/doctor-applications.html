@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Doctor Applications | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <!-- Mobile Header (reuse) -->
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar (reuse exactly) -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="doctor-applications.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+
+                <a class="admin-sidebar__link" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialties Management
+                </a>
+                <a class="admin-sidebar__link">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Page Header -->
+            <div class="admin-page-header admin-page-header--with-actions">
+                <div>
+                    <h1 class="admin-page-header__title">
+                        Doctor Applications
+                        <span class="admin-badge admin-badge--pending">Pending (8)</span>
+                    </h1>
+                    <div class="admin-page-header__breadcrumb">Home / Doctors</div>
+                </div>
+
+                <div class="admin-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search..." />
+                </div>
+            </div>
+
+            <!-- Table Card -->
+            <div class="admin-card admin-table-card">
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Speciality</th>
+                            <th>Submitted On</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=SarahNassar" />
+                                    <div>
+                                        <strong>Dr. Sarah Nassar</strong>
+                                        <span>Pediatrician</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Pediatrician</td>
+                            <td>Apr 22, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=AhmedKhaled" />
+                                    <div>
+                                        <strong>Dr. Ahmed Khaled</strong>
+                                        <span>Cardiologist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Cardiologist</td>
+                            <td>Apr 21, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=RaniaHassan" />
+                                    <div>
+                                        <strong>Dr. Rania Hassan</strong>
+                                        <span>Psychiatrist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Psychiatrist</td>
+                            <td>Apr 20, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=OmarAli" />
+                                    <div>
+                                        <strong>Dr. Omar Ali</strong>
+                                        <span>Dentist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dentist</td>
+                            <td>Apr 20, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=DinaIsmail" />
+                                    <div>
+                                        <strong>Dr. Dina Ismail</strong>
+                                        <span>Dermatologist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dermatologist</td>
+                            <td>Apr 19, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=JohnSuleiman" />
+                                    <div>
+                                        <strong>Dr. John Suleiman</strong>
+                                        <span>General Practitioner</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>General Practitioner</td>
+                            <td>Apr 18, 2024</td>
+                            <td class="text-end">
+                                <a href="doctor-application-details.html">
+                                    <button type="button" class="admin-btn admin-btn--outline">
+                                        View Details
+                                    </button>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="admin-pagination">
+                    <span>1 – 6 of 8</span>
+                    <div class="admin-pagination__controls">
+                        <button><i class="bi bi-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

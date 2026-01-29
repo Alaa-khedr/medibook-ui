@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Payment Details | MediBook</title>
+    <title>Doctor Details | MediBook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
@@ -24,6 +24,7 @@
 
 <body class="admin">
 
+    <!-- Mobile Header -->
     <header class="admin-mobile-header d-lg-none">
         <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
             <i class="bi bi-list"></i>
@@ -44,13 +45,13 @@
                 <a class="admin-sidebar__link" href="dashboard.html">
                     <i class="bi bi-speedometer2"></i> Dashboard
                 </a>
-                <a class="admin-sidebar__link" href="approved-doctors.html">
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="doctor-applications.html">
                     <i class="bi bi-person-badge"></i> Doctors
                 </a>
                 <a class="admin-sidebar__link" href="patients-list.html">
                     <i class="bi bi-people"></i> Patients
                 </a>
-                <a class="admin-sidebar__link admin-sidebar__link--active" href="bookings-list.html">
+                <a class="admin-sidebar__link" href="bookings-list.html">
                     <i class="bi bi-calendar-check"></i> Bookings
                 </a>
                 <a class="admin-sidebar__link" href="payments-overview.html">
@@ -59,7 +60,7 @@
                 <a class="admin-sidebar__link" href="specialties-management.html">
                     <i class="bi bi-diagram-3"></i> Specialties Management
                 </a>
-                <a class="admin-sidebar__link" href="system-settings.html">
+                <a class="admin-sidebar__link">
                     <i class="bi bi-gear"></i> System
                 </a>
                 <a class="admin-sidebar__link" href="admin-profile.html">
@@ -75,76 +76,54 @@
         <!-- Main -->
         <main class="admin-main">
 
-            <!-- Header -->
-            <div class="admin-page-header">
-                <h1 class="admin-page-header__title">Payment Details</h1>
-                <div class="admin-page-header__breadcrumb">
-                    Home / Bookings / Booking Details / Payment
+            <!-- Page Header -->
+            <div class="admin-page-header admin-page-header--with-actions">
+                <div>
+                    <h1 class="admin-page-header__title">Dr. Sarah Nassar</h1>
+                    <div class="admin-page-header__breadcrumb">
+                        Home / Doctors / Dr. Sarah Nassar
+                    </div>
                 </div>
-                <div class="admin-page-header__subtitle">
-                    Booking Ref: <strong>BKG-001245</strong>
-                </div>
-            </div>
 
-            <!-- Payment Summary -->
-            <div class="admin-card admin-info-card mb-4">
-                <h3 class="admin-card__title">
-                    <i class="bi bi-receipt"></i> Payment Summary
-                </h3>
-
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <div class="admin-summary admin-summary--blue">
-                            <span>Amount Paid</span>
-                            <strong>$100.00</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="admin-summary admin-summary--orange">
-                            <span>Platform Fee (15%)</span>
-                            <strong>$15.00</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="admin-summary admin-summary--green">
-                            <span>Doctor Share</span>
-                            <strong>$85.00</strong>
-                        </div>
-                    </div>
+                <div class="admin-doctor-actions">
+                    <span class="admin-badge admin-badge--active">✓ Active</span>
+                    <button class="admin-btn admin-btn--danger border-0">
+                        <i class="bi bi-power"></i> Disable Doctor
+                    </button>
                 </div>
             </div>
 
-            <!-- Payment Method -->
-            <div class="admin-card admin-info-card mb-4">
-                <h3 class="admin-card__title">
-                    <i class="bi bi-credit-card"></i> Payment Method
-                </h3>
+            <!-- Doctor Details Card -->
+            <div class="admin-card admin-doctor-details">
 
-                <ul class="admin-details-list">
-                    <li>
-                        <strong>Method:</strong> Credit Card
-                    </li>
-                    <li>
-                        <strong>Card:</strong> VISA •••• 1234
-                    </li>
-                    <li>
-                        <strong>Payment Type:</strong> Online
-                    </li>
-                    <li>
-                        <strong>Payment Date:</strong> April 15, 2024 – 10:02 AM
-                    </li>
-                </ul>
-            </div>
+                <div class="admin-info-section">
+                    <h4>Doctor Info</h4>
+                    <ul>
+                        <li><strong>Full Name:</strong> Dr. Sarah Nassar</li>
+                        <li><strong>Email:</strong> sarah.nassar@email.com</li>
+                        <li><strong>Phone:</strong> +201231234567</li>
+                        <li><strong>Specialty:</strong> Pediatrician</li>
+                    </ul>
+                </div>
 
-            <!-- Payment Status -->
-            <div class="admin-card admin-info-card">
-                <h3 class="admin-card__title">
-                    <i class="bi bi-check-circle"></i> Payment Status
-                </h3>
+                <div class="admin-info-section">
+                    <h4>Consultation Types</h4>
+                    <p>Online & Offline</p>
+                </div>
 
-                <span class="admin-status admin-status--confirmed">Confirmed</span>
+                <div class="admin-info-section">
+                    <h4>Pricing</h4>
+                    <p>Online: $40 per consultation</p>
+                    <p>Offline: $60 per consultation</p>
+                </div>
+
+                <div class="admin-info-section">
+                    <h4>Payment Info</h4>
+                    <p><strong>Bank:</strong> Main National Bank</p>
+                    <p><strong>IBAN:</strong> EG21000320067890123234567892314</p>
+                    <p><strong>Account Holder:</strong> Sarah Nassar</p>
+                </div>
+
             </div>
 
         </main>

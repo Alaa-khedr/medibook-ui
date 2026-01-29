@@ -5,16 +5,38 @@ buttons,
 forms
 */
 
-/* ======================
-   Patient styles
-====================== */
-
-
-/* ======================
-   Doctor styles
-====================== */
-
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
 /* ======================
-   Admin styles
+   Admin Variables
 ====================== */
+:root {
+   --admin-font: 'Inter', sans-serif;
+
+   --admin-primary: #4f6bed;
+   --admin-primary-hover: #3e58c9;
+
+   --admin-sidebar-bg: linear-gradient(180deg, #2f4fd8, #5b7cfa);
+
+   --admin-bg-light: #f3f4fa;
+   --admin-card-bg: #ffffff;
+
+   --admin-text-dark: #2b2f38;
+   --admin-text-muted: #8b90a0;
+
+   --admin-border-color: #d1d5db;
+}
+
+/* ======================
+   Admin Global
+====================== */
+body.admin,
+body.admin-auth {
+   font-family: var(--admin-font);
+   background-color: var(--admin-bg-light);
+   color: var(--admin-text-dark);
+}

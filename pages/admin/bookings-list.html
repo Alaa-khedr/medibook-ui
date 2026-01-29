@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bookings List | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <!-- Mobile Header -->
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a class="admin-sidebar__link" href="approved-doctors.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+                <a class="admin-sidebar__link" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialties Management
+                </a>
+                <a class="admin-sidebar__link" href="system-settings.html">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <h1 class="admin-page-header__title">Bookings List</h1>
+                <div class="admin-page-header__breadcrumb">
+                    Home / Bookings
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="admin-card admin-filters">
+                <div class="admin-filters__group">
+                    <select class="admin-select">
+                        <option>Select Date</option>
+                    </select>
+
+                    <select class="admin-select">
+                        <option>Doctor</option>
+                    </select>
+
+                    <select class="admin-select">
+                        <option>All Statuses</option>
+                    </select>
+
+                    <select class="admin-select">
+                        <option>All Types</option>
+                    </select>
+
+                    <button class="admin-btn admin-btn--primary">Search</button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="admin-card admin-table-card mt-4">
+
+                <table class="admin-table admin-table--clickable">
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Patient Name</th>
+                            <th>Doctor</th>
+                            <th>Date & Time</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-001245</td>
+                            <td>Sara Ahmed</td>
+                            <td>Dr. Ali Hassan</td>
+                            <td>April 15, 2024 | 10:00 AM</td>
+                            <td><span class="admin-tag admin-tag--online">Online</span></td>
+                            <td><span class="admin-status admin-status--confirmed">Confirmed</span></td>
+                        </tr>
+
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-001132</td>
+                            <td>Mohamed Sami</td>
+                            <td>Dr. Lina Khaled</td>
+                            <td>April 12, 2024 | 03:30 PM</td>
+                            <td><span class="admin-tag admin-tag--offline">Offline</span></td>
+                            <td><span class="admin-status admin-status--completed">Completed</span></td>
+                        </tr>
+
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-001078</td>
+                            <td>Fatma Nabil</td>
+                            <td>Dr. Omar Salem</td>
+                            <td>April 10, 2024 | 11:00 AM</td>
+                            <td><span class="admin-tag admin-tag--online">Online</span></td>
+                            <td><span class="admin-status admin-status--pending">Pending</span></td>
+                        </tr>
+
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-000965</td>
+                            <td>Ahmed Youssef</td>
+                            <td>Dr. Sara Adel</td>
+                            <td>April 08, 2024 | 02:00 PM</td>
+                            <td><span class="admin-tag admin-tag--offline">Offline</span></td>
+                            <td><span class="admin-status admin-status--cancelled">Cancelled</span></td>
+                        </tr>
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-000812</td>
+                            <td>Nora Tarek</td>
+                            <td>Dr. Nabil Hosni</td>
+                            <td>April 05, 2024 | 09:00 AM</td>
+                            <td><span class="admin-tag admin-tag--online">Online</span></td>
+                            <td><span class="admin-status admin-status--confirmed">Confirmed</span></td>
+                        </tr>
+
+                        <tr onclick="window.location.href='booking-details.html'">
+                            <td>BKG-000735</td>
+                            <td>Khaled Ibrahim</td>
+                            <td>Dr. Hala Emad</td>
+                            <td>April 03, 2024 | 01:15 PM</td>
+                            <td><span class="admin-tag admin-tag--offline">Offline</span></td>
+                            <td><span class="admin-status admin-status--completed">Completed</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="admin-pagination">
+                    <span>1 – 6 of 120</span>
+
+                    <div class="admin-pagination__controls">
+                        <button><i class="bi bi-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
