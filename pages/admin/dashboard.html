@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <!-- Mobile Topbar -->
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <div class="admin-sidebar-wrapper collapse d-lg-block" id="adminSidebar">
+            <aside class="admin-sidebar">
+                <div class="admin-sidebar__logo">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Admin</span>
+                </div>
+
+                <nav class="admin-sidebar__nav">
+                    <a class="admin-sidebar__link admin-sidebar__link--active" href="dashboard.html">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+
+                    <a class="admin-sidebar__link" href="doctor-applications.html">
+                        <i class="bi bi-person-badge"></i> Doctors
+                    </a>
+
+                    <a class="admin-sidebar__link" href="patients-list.html">
+                        <i class="bi bi-people"></i> Patients
+                    </a>
+                    <a class="admin-sidebar__link" href="bookings-list.html">
+                        <i class="bi bi-calendar-check"></i> Bookings
+                    </a>
+                    <a class="admin-sidebar__link" href="payments-overview.html">
+                        <i class="bi bi-credit-card"></i> Payments
+                    </a>
+                    <a class="admin-sidebar__link" href="specialties-management.html">
+                        <i class="bi bi-diagram-3"></i> Specialties Management
+                    </a>
+                    <a class="admin-sidebar__link">
+                        <i class="bi bi-gear"></i> System
+                    </a>
+                    <a class="admin-sidebar__link" href="admin-profile.html">
+                        <i class="bi bi-person-circle"></i> Admin Profile
+                    </a>
+                </nav>
+
+                <a href="login.html" class="admin-sidebar__link">
+                    <i class="bi bi-box-arrow-left"></i> Logout
+                </a>
+            </aside>
+        </div>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <div class="admin-page-header">
+                <h1 class="admin-page-header__title">Admin Dashboard</h1>
+                <div class="admin-page-header__breadcrumb">Home / Dashboard</div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-card__icon admin-stat-card__icon--blue">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <div>
+                            <div class="admin-stat-card__value">250</div>
+                            <div class="admin-stat-card__label">Total Doctors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-card__icon admin-stat-card__icon--green">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <div>
+                            <div class="admin-stat-card__value">1,200</div>
+                            <div class="admin-stat-card__label">Total Patients</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-card__icon admin-stat-card__icon--orange">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <div>
+                            <div class="admin-stat-card__value">3,540</div>
+                            <div class="admin-stat-card__label">Total Bookings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="admin-card">
+                <h5 class="admin-card__title">Quick Links</h5>
+
+                <div class="admin-quick-item">
+                    <div class="admin-quick-item__left">
+                        <div class="admin-quick-item__icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div>
+                            <div class="admin-quick-item__title">
+                                <a href="doctor-applications.html" class="text-decoration-none">Doctor Applications</a>
+                            </div>
+                            <div class="admin-quick-item__desc">Manage new registrations</div>
+                        </div>
+                    </div>
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+
+                <div class="admin-quick-item">
+                    <div class="admin-quick-item__left">
+                        <div class="admin-quick-item__icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div>
+                            <div class="admin-quick-item__title">
+                                <a href="bookings-list.html" class="text-decoration-none">Bookings</a>
+                            </div>
+                            <div class="admin-quick-item__desc">View and manage appointments</div>
+                        </div>
+                    </div>
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+
+                <div class="admin-quick-item">
+                    <div class="admin-quick-item__left">
+                        <div class="admin-quick-item__icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <div>
+                            <div class="admin-quick-item__title">
+                                <a href="payments-overview.html" class="text-decoration-none">Payments</a>
+                            </div>
+                            <div class="admin-quick-item__desc">Monitor payments and payouts</div>
+                        </div>
+                    </div>
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

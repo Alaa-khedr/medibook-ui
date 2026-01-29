@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Specialties Management | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a class="admin-sidebar__link" href="approved-doctors.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+                <a class="admin-sidebar__link" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialities Management
+                </a>
+                <a class="admin-sidebar__link" href="system-settings.html">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Header -->
+            <div class="admin-page-header admin-page-header--with-actions">
+                <div>
+                    <h1 class="admin-page-header__title">Specialties Management</h1>
+                    <div class="admin-page-header__breadcrumb">
+                        Home / System / Specialties
+                    </div>
+                </div>
+
+                <button class="admin-btn admin-btn--primary">
+                    <i class="bi bi-plus"></i> Add Specialty
+                </button>
+            </div>
+
+            <!-- Table -->
+            <div class="admin-card admin-table-card">
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Specialty</th>
+                            <th>Doctors</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Pediatrician</td>
+                            <td>15</td>
+                            <td class="text-end">
+                                <button class="admin-btn admin-btn--outline">
+                                    <i class="bi bi-pencil"></i> Edit
+                                </button>
+                                <button class="admin-btn admin-btn--danger ms-2">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Cardiologist</td>
+                            <td>12</td>
+                            <td class="text-end">
+                                <button class="admin-btn admin-btn--outline">
+                                    <i class="bi bi-pencil"></i> Edit
+                                </button>
+                                <button class="admin-btn admin-btn--danger ms-2">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Psychiatrist</td>
+                            <td>8</td>
+                            <td class="text-end">
+                                <button class="admin-btn admin-btn--outline">
+                                    <i class="bi bi-pencil"></i> Edit
+                                </button>
+                                <button class="admin-btn admin-btn--danger ms-2">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="admin-pagination">
+                    <span>1 – 10 of 25 entries</span>
+                    <div class="admin-pagination__controls">
+                        <button><i class="bi bi-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Patient Details | MediBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+</head>
+
+<body class="admin">
+
+    <!-- Mobile Header -->
+    <header class="admin-mobile-header d-lg-none">
+        <button class="admin-mobile-header__toggle" data-bs-toggle="collapse" data-bs-target="#adminSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="admin-mobile-header__title">Admin</span>
+    </header>
+
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar collapse d-lg-block" id="adminSidebar">
+            <div class="admin-sidebar__logo">
+                <i class="bi bi-shield-check"></i>
+                <span>Admin</span>
+            </div>
+
+            <nav class="admin-sidebar__nav">
+                <a class="admin-sidebar__link" href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a class="admin-sidebar__link" href="approved-doctors.html">
+                    <i class="bi bi-person-badge"></i> Doctors
+                </a>
+                <a class="admin-sidebar__link admin-sidebar__link--active" href="patients-list.html">
+                    <i class="bi bi-people"></i> Patients
+                </a>
+                <a class="admin-sidebar__link" href="bookings-list.html">
+                    <i class="bi bi-calendar-check"></i> Bookings
+                </a>
+                <a class="admin-sidebar__link" href="payments-overview.html">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+                <a class="admin-sidebar__link" href="specialties-management.html">
+                    <i class="bi bi-diagram-3"></i> Specialties Management
+                </a>
+                <a class="admin-sidebar__link" href="system-settings.html">
+                    <i class="bi bi-gear"></i> System
+                </a>
+                <a class="admin-sidebar__link" href="admin-profile.html">
+                    <i class="bi bi-person-circle"></i> Admin Profile
+                </a>
+            </nav>
+
+            <a href="login.html" class="admin-sidebar__link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <h1 class="admin-page-header__title">Patient Details</h1>
+                <div class="admin-page-header__breadcrumb">
+                    Home / Patients / Mohamed Ali
+                </div>
+            </div>
+
+            <!-- Patient Info -->
+            <div class="admin-card admin-patient-info">
+                <div class="admin-user admin-user--large">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=MohamedAli" alt="Patient" />
+                    <div>
+                        <h3>Mohamed Ali</h3>
+                        <p><strong>Email:</strong> mohamed.ali@email.com</p>
+                        <p><strong>Phone:</strong> +201101234567</p>
+                        <p><strong>Date of Birth:</strong> Feb 15, 1990</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appointment History -->
+            <div class="admin-card admin-table-card">
+
+                <h3 class="admin-section-title mt-4 ps-3 pt-3">Appointment History</h3>
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=SarahNassar" />
+                                    <div>
+                                        <strong>Dr. Sarah Nassar</strong>
+                                        <span>Pediatrician</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Apr 12, 2024 – 11:00 AM</td>
+                            <td>Online</td>
+                            <td><span class="admin-status admin-status--active">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=AhmedKhaled" />
+                                    <div>
+                                        <strong>Dr. Ahmed Khaled</strong>
+                                        <span>Cardiologist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Apr 05, 2024 – 2:30 PM</td>
+                            <td>Offline</td>
+                            <td><span class="admin-status admin-status--active">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=ReemKamal" />
+                                    <div>
+                                        <strong>Dr. Reem Kamal</strong>
+                                        <span>Dermatologist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Mar 28, 2024 – 10:15 AM</td>
+                            <td>Offline</td>
+                            <td><span class="admin-status admin-status--disabled">Cancelled</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="admin-user">
+                                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=OmarAli" />
+                                    <div>
+                                        <strong>Dr. Omar Ali</strong>
+                                        <span>Dentist</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Mar 18, 2024 – 4:00 PM</td>
+                            <td>Online</td>
+                            <td><span class="admin-status admin-status--active">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="admin-pagination">
+                    <span>1 – 4 of 4</span>
+                    <div class="admin-pagination__controls">
+                        <button><i class="bi bi-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
