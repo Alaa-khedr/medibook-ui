@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBook | My Appointments</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="dashboard.html">
+                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link text-muted" href="#">
+                            <i class="fa-regular fa-bell fa-lg"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="font-size: 0.6rem;">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link p-0">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
+                                class="avatar-md" alt="Profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+
+        <h4 class="fw-bold mb-4 text-dark">Appointments</h4>
+
+        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active px-4 py-2" id="pills-upcoming-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-upcoming" type="button">Upcoming</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link px-4 py-2 text-muted" id="pills-past-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-past" type="button">Past</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-upcoming" role="tabpanel">
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Mohamed+Abbas&background=random"
+                                class="avatar-md" alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Mohamed Abbas</h6>
+                                <p class="text-muted small mb-1">Tues, Apr 30 | 11:00 AM</p>
+                                <span class="badge bg-primary-subtle text-primary fw-normal"><i
+                                        class="fa-solid fa-video me-1"></i> Online</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Khaled&background=random&color=fff"
+                                class="avatar-md" alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Sarah Khaled</h6>
+                                <p class="text-muted small mb-1">Tues, Apr 30 | 01:00 PM</p>
+                                <span class="text-muted small"><i
+                                        class="fa-solid fa-location-dot text-success me-1"></i> City Medical
+                                    Center</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Raouf+Hussein&background=random"
+                                class="avatar-md" alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Raouf Hussein</h6>
+                                <p class="text-muted small mb-1">Wed, May 1 | 09:00 AM</p>
+                                <span class="badge bg-primary-subtle text-primary fw-normal"><i
+                                        class="fa-solid fa-video me-1"></i> Online</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Ahmed+Hamdy&background=random" class="avatar-md"
+                                alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Ahmed Hamdy</h6>
+                                <p class="text-muted small mb-1">Wed, May 1 | 02:30 PM</p>
+                                <span class="text-muted small"><i
+                                        class="fa-solid fa-location-dot text-success me-1"></i> City Medical
+                                    Center</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Amira+Youssef&background=random"
+                                class="avatar-md" alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Amira Youssef</h6>
+                                <p class="text-muted small mb-1">Thu, May 2 | 10:00 AM</p>
+                                <span class="text-muted small"><i
+                                        class="fa-solid fa-location-dot text-success me-1"></i> City Medical
+                                    Center</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Nour+Eldin&background=random" class="avatar-md"
+                                alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Nour Eldin</h6>
+                                <p class="text-muted small mb-1">Thu, May 2 | 03:30 PM</p>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-primary-subtle text-primary fw-normal"><i
+                                            class="fa-solid fa-video me-1"></i> Online</span>
+                                    <span class="text-muted small">|</span>
+                                    <span class="small text-dark fw-medium">View Draft <i
+                                            class="fa-solid fa-chevron-right fa-xs ms-1"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="appointment-link-card text-decoration-none">
+                    <div class="row align-items-center">
+                        <div class="col-10 d-flex align-items-center gap-3">
+                            <img src="https://ui-avatars.com/api/?name=Fatma+Adel&background=random" class="avatar-md"
+                                alt="Patient">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Fatma Adel</h6>
+                                <p class="text-muted small mb-1">Fri, May 3 | 12:00 PM</p>
+                                <span class="text-muted small"><i
+                                        class="fa-solid fa-location-dot text-success me-1"></i> City Medical
+                                    Center</span>
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="tab-pane fade" id="pills-past" role="tabpanel">
+                <div class="text-center py-5 text-muted">
+                    <i class="fa-regular fa-calendar-xmark fa-3x mb-3 opacity-50"></i>
+                    <p>No past appointments found.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
