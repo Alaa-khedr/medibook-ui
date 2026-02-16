@@ -1,3 +1,4 @@
+<!--Patient-screen-1-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,27 +9,304 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Font: Inter -->
-        <link
+    <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>MediBook</title>
+    <!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/layout.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/components.css" /> -->
+    <link rel="stylesheet" href="/assets/css/patient.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <title>MediBook Home</title>
 
 </head>
 
 <body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="navbar__container container d-flex justify-content-between">
+            <a class="navbar__brand" href="patient-home.html">
+                <img class="navbar__logo" src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook">
+            </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MediBook Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <div class="navbar__actions d-flex flex-column flex-lg-row align-items-lg-center ms-auto">
+                        <a href="/pages/doctor/doctor-signup.html"
+                            class="doctor__link mb-3 mb-lg-0 me-lg-3 text-center">Join as a Doctor</a>
+
+                        <div class="d-flex gap-3 justify-content-center">
+                            <a href="/pages/patient/login.html" class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Log
+                                in</a>
+                            <a href="/pages/patient/signup.html"
+                                class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><!-- End Of The Navbar Section-->
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero__container container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6 hero__content">
+                    <h1 class="hero__title main-text">Book Your Doctor in 3 Easy Steps</h1>
+                    <p class="hero__description mt-4">Find and book the best doctors near you effortlessly.</p>
+                    <div class="hero__search search-box mt-5 d-flex justify-content-center gap-3 ">
+                        <div class="search-box__field flex-grow-1">
+                            <select class="search-box__select">
+                                <option value="">Select Specialty</option>
+                                <option value="general">General Practitioner - طبيب عام</option>
+                                <option value="cardiology">Cardiology - قلب</option>
+                                <option value="dermatology">Dermatology - جلدية</option>
+                                <option value="pediatrics">Pediatrics - أطفال</option>
+                                <option value="orthopedics">Orthopedics - عظام</option>
+                                <option value="neurology">Neurology - مخ وأعصاب</option>
+                                <option value="psychiatry">Psychiatry - نفسي</option>
+                                <option value="ent">ENT - أنف وأذن وحنجرة</option>
+                                <option value="ophthalmology">Ophthalmology - عيون</option>
+                                <option value="dentistry">Dentistry - أسنان</option>
+                                <option value="urology">Urology - مسالك بولية</option>
+                                <option value="gynecology">Gynecology - نساء وتوليد</option>
+                                <option value="andrology">Andrology - ذكورة</option>
+                                <option value="gastroenterology">Gastroenterology - جهاز هضمي</option>
+                                <option value="pulmonology">Pulmonology - صدر</option>
+                                <option value="endocrinology">Endocrinology - غدد صماء</option>
+                                <option value="nephrology">Nephrology - كلى</option>
+                                <option value="rheumatology">Rheumatology - روماتيزم</option>
+                                <option value="oncology">Oncology - أورام</option>
+                                <option value="hematology">Hematology - أمراض دم</option>
+                                <option value="infectious">Infectious Diseases - أمراض معدية</option>
+                                <option value="general-surgery">General Surgery - جراحة عامة</option>
+                                <option value="vascular-surgery">Vascular Surgery - جراحة أوعية دموية</option>
+                                <option value="neurosurgery">Neurosurgery - جراحة مخ وأعصاب</option>
+                                <option value="cardiothoracic">Cardiothoracic Surgery - جراحة قلب وصدر</option>
+                                <option value="nutrition">Clinical Nutrition - تغذية علاجية</option>
+                                <option value="physiotherapy">Physiotherapy - علاج طبيعي</option>
+                            </select>
+                        </div>
+                        <div class="search-box__field flex-grow-1">
+                            <select class="search-box__select">
+                                <option value="">Select Location</option>
+                                <option value="Cairo">Cairo</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Giza">Giza</option>
+                                <option value="Qalyubia">Qalyubia</option>
+                                <option value="Dakahlia">Dakahlia</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Beheira">Beheira</option>
+                                <option value="Faiyum">Faiyum</option>
+                                <option value="Gharbia">Gharbia</option>
+                                <option value="Ismailia">Ismailia</option>
+                                <option value="Monufia">Monufia</option>
+                                <option value="Minya">Minya</option>
+                                <option value="Port-Said">Port Said</option>
+                                <option value="Sohag">Sohag</option>
+                                <option value="Suez">Suez</option>
+                                <option value="Luxor">Luxor</option>
+                                <option value="Aswan">Aswan</option>
+                            </select>
+                        </div>
+                        <a href="patient-search.html" class="patient-btn patient-btn--danger">Search</a>
+                    </div>
+                    <div class="hero__consultation mt-5 p-4 d-flex flex-column align-items-center">
+                        <h3 class="consultation__title main-text mb-4">Online & Offline Consultation</h3>
+                        <div class="consultation__wrapper">
+                            <div class="consult-card">
+                                <div class="consult-card__icon">
+                                    <img class="icon-svg" src="/assets/images/patient/video-call.svg" alt="">
+                                </div>
+                                <div class="consult-card__info">
+                                    <h4 class="consult-card__name main-text">Online</h4>
+                                    <p class="consult-card__desc">Consult with a doctor via video call</p>
+                                </div>
+                            </div>
+                            <div class="consult-card">
+                                <div class="consult-card__icon">
+                                    <img class="icon-svg" src="/assets/images/patient/hospital.svg" alt="">
+                                </div>
+                                <div class="consult-card__info">
+                                    <h4 class="consult-card__name main-text">At the Clinic</h4>
+                                    <p class="consult-card__desc">Visit the doctor in their clinic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Of Hero Section -->
+
+    <!-- How it Work Section -->
+    <section class="steps py-5">
+        <div class="steps__container container">
+            <h2 class="steps__title main-text text-center mb-3">How It Works?</h2>
+            <div class="steps__wrapper">
+                <div class="step-card">
+                    <img class="icon-svg" src="/assets/images/patient/search1.svg" alt="">
+                    <h4 class="step-card__title main-text">Search</h4>
+                    <p class="step-card__desc">Search by specialty and location</p>
+                </div>
+                <div class="step-card">
+                    <img class="icon-svg" src="/assets/images/patient/doctor.svg" alt="">
+                    <h4 class="step-card__title main-text">Choose</h4>
+                    <p class="step-card__desc">Select a doctor and view their schedule</p>
+                </div>
+                <div class="step-card">
+                    <img class="icon-svg" src="/assets/images/patient/credit-card.svg" alt="">
+                    <h4 class="step-card__title main-text">Pay</h4>
+                    <p class="step-card__desc">Pay online to confirm the appointment</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Of How It Work Section-->
+
+    <section id="specialties" class="specialties">
+        <div class="container">
+            <h2 class="specialties__title main-text text-center mb-4">Our Specialties</h2>
+            <div class="specialties__wrapper">
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/dermatology.svg" alt="">
+                    <p class="specialty-card__name">Dermatology</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/dentistry.svg" alt="">
+                    <p class="specialty-card__name">Dentistry</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/cardiology (1).svg" alt="">
+                    <p class="specialty-card__name">Cardiology</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/gynecology (1).svg" alt="">
+                    <p class="specialty-card__name">Gynecology</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/pharynx (1).svg" alt="">
+                    <p class="specialty-card__name">ENT</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/operating-room.svg" alt="">
+                    <p class="specialty-card__name">General Surgery</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/mental-health (2).svg" alt="">
+                    <p class="specialty-card__name">Psychiatry</p>
+                </div>
+                <div class="specialty-card">
+                    <img class="icon-svg" src="/assets/images/patient/pediatrics (1).svg" alt="">
+                    <p class="specialty-card__name">Pediatrics</p>
+                </div>
+            </div>
+            <button class="patient-btn patient-btn--light mt-3 d-block mx-auto mb-5">View All Specialties</button>
+        </div>
+    </section><!-- End Of Specialties Section -->
+
+    <!-- Book Appointment Section -->
+    <section class="book-cta">
+        <div class="container">
+            <div class="book-cta__wrapper d-flex justify-content-between align-items-center">
+                <div class="book-cta__content">
+                    <h2 class="book-cta__title mb-3">Book Your Appointment Now</h2>
+                    <p class="book-cta__description">
+                        Book your appointment now with ease with the best specialized doctors in your area.
+                    </p>
+                    <div class="book-cta__features d-flex gap-4 mt-4">
+                        <div class="book-cta__feature">
+                            <i class="fas fa-calendar-check book-cta__feature-icon"></i>
+                            <span class="book-cta__feature-text">Verified Doctors</span>
+                        </div>
+                        <div class="book-cta__feature">
+                            <i class="fas fa-shield-alt book-cta__feature-icon"></i>
+                            <span class="book-cta__feature-text">Secure Payments</span>
+                        </div>
+                        <div class="book-cta__feature">
+                            <i class="fas fa-users book-cta__feature-icon"></i>
+                            <span class="book-cta__feature-text">Thousands of bookings</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cta__action text-center">
+                    <a href="/pages/patient/patient-search.html" class="book-cta__button patient-btn--danger">Book Now</a>
+                    <div class="book-cta__dropdown-wrapper mt-4">
+                        <select class="book-cta__select form-select">
+                            <option><a href="guest-details.html">Book without creating an account</a></option>
+                            <option><a href="signup.html">Register and book</a></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Of Book Appointment Section-->
+
+    <!-- About MediBook Section -->
+    <section class="about-section py-5">
+        <div class="container about__container py-3">
+            <h2 class="about-section__title main-text mb-4">About MediBook</h2>
+            <p class="about-section__text">
+                We are a specialized medical appointment booking platform that makes it easy for you to find
+                professional doctors and book your appointments online with confidence and ease.
+            </p>
+        </div>
+    </section><!-- End Of About Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about d-flex flex-column justify-content-start">
+                <a href="patient-home.html">
+                    <img class="footer__logo" src="/assets/images/logos/medibook-logo-transparent.png"
+                        alt="MediBook Logo">
+                </a>
+                <div class="footer__socials mt-2">
+                    <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <p>Quick Links</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                    <li class="footer__item"><a href="#specialties" class="footer__link">Specialties</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <p>Contact Us</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item">
+                        <i class="fas fa-phone footer__icon"></i>
+                        <a href="tel:+201234567890">01234567890</a>
+                    </li>
+                    <li class="footer__item">
+                        <i class="fas fa-envelope footer__icon"></i>
+                        <a href="mailto:info@medibook.com">info@medibook.com</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </footer><!-- End Of Footer Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
