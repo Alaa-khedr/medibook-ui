@@ -1,1 +1,418 @@
 <!--Patient-screen-2-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font: Inter -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/layout.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/components.css" /> -->
+    <link rel="stylesheet" href="/assets/css/patient.css"/>
+    <link rel="stylesheet" href="/assets/css/responsive.css"/>
+    <title>MediBook | Search Results</title>
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="navbar__container container d-flex justify-content-between">
+            <a class="navbar__brand" href="patient-home.html">
+                <img class="navbar__logo" src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MediBook Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div class="navbar__actions d-flex flex-column flex-lg-row align-items-lg-center ms-auto">
+                        <a href="/pages/doctor/doctor-signup.html" class="doctor__link mb-3 mb-lg-0 me-lg-3 text-center">Join as a Doctor</a>
+                        
+                        <div class="d-flex gap-3 justify-content-center">
+                            <a href="login.html" class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Log in</a>
+                            <a href="signup.html" class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><!-- End Of The Navbar Section-->
+
+    <!-- Main Section -->
+    <main class="results-page">
+        <div class="container">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="my-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="patient-home.html" class="results-page__link-item text-muted">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+                </ol>
+            </nav>
+
+            <h2 class="results-page__title main-text">Search Results</h2>
+
+            <section class="results-page__search-box search-box mt-3 d-flex justify-content-center gap-3">
+                <div class="search-box__field flex-grow-1">
+                    <select class="search-box__select">
+                        <option selected disabled>Select Specialty</option>
+                        <option value="general">General Practitioner - طبيب عام</option>
+                        <option value="cardiology">Cardiology - قلب</option>
+                        <option value="dermatology">Dermatology - جلدية</option>
+                        <option value="pediatrics">Pediatrics - أطفال</option>
+                        <option value="orthopedics">Orthopedics - عظام</option>
+                        <option value="neurology">Neurology - مخ وأعصاب</option>
+                        <option value="psychiatry">Psychiatry - نفسي</option>
+                        <option value="ent">ENT - أنف وأذن وحنجرة</option>
+                        <option value="ophthalmology">Ophthalmology - عيون</option>
+                        <option value="dentistry">Dentistry - أسنان</option>
+                        <option value="urology">Urology - مسالك بولية</option>
+                        <option value="gynecology">Gynecology - نساء وتوليد</option>
+                        <option value="andrology">Andrology - ذكورة</option>
+                        <option value="gastroenterology">Gastroenterology - جهاز هضمي</option>
+                        <option value="pulmonology">Pulmonology - صدر</option>
+                        <option value="endocrinology">Endocrinology - غدد صماء</option>
+                        <option value="nephrology">Nephrology - كلى</option>
+                        <option value="rheumatology">Rheumatology - روماتيزم</option>
+                        <option value="oncology">Oncology - أورام</option>
+                        <option value="hematology">Hematology - أمراض دم</option>
+                        <option value="infectious">Infectious Diseases - أمراض معدية</option>
+                        <option value="general-surgery">General Surgery - جراحة عامة</option>
+                        <option value="vascular-surgery">Vascular Surgery - جراحة أوعية دموية</option>
+                        <option value="neurosurgery">Neurosurgery - جراحة مخ وأعصاب</option>
+                        <option value="cardiothoracic">Cardiothoracic Surgery - جراحة قلب وصدر</option>
+                        <option value="nutrition">Clinical Nutrition - تغذية علاجية</option>
+                        <option value="physiotherapy">Physiotherapy - علاج طبيعي</option>
+                    </select>
+                </div>
+                <div class="search-box__field flex-grow-1">
+                    <select class="search-box__select">
+                        <option selected disabled>Select Location</option>
+                        <option value="Cairo">Cairo</option>
+                        <option value="Alexandria">Alexandria</option>
+                        <option value="Giza">Giza</option>
+                        <option value="Qalyubia">Qalyubia</option>
+                        <option value="Dakahlia">Dakahlia</option>
+                        <option value="Alexandria">Alexandria</option>
+                        <option value="Beheira">Beheira</option>
+                        <option value="Faiyum">Faiyum</option>
+                        <option value="Gharbia">Gharbia</option>
+                        <option value="Ismailia">Ismailia</option>
+                        <option value="Monufia">Monufia</option>
+                        <option value="Minya">Minya</option>
+                        <option value="Port-Said">Port Said</option>
+                        <option value="Sohag">Sohag</option>
+                        <option value="Suez">Suez</option>
+                        <option value="Luxor">Luxor</option>
+                        <option value="Aswan">Aswan</option>
+                    </select>
+                </div>
+                <div class="search-box__field flex-grow-1">
+                    <select class="search-box__select">
+                        <option selected disabled>Select Area</option>
+                        <option>New Cairo (Cairo)</option>
+                        <option>Maadi (Cairo)</option>
+                        <option>Smouha (Alex)</option>
+                        <option>Sidi Gaber (Alex)</option>
+                    </select>
+                </div>
+                <a href="patient-search.html" class="patient-btn patient-btn--danger">Search</a>
+            </section>
+
+            <div class="my-3 d-flex gap-0">
+                <button class="patient-btn patient-btn--primary">All</button>
+                <button class="patient-btn patient-btn--light">Online</button>
+                <button class="patient-btn patient-btn--light">Offline</button>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center my-5">
+                <span class="text-muted">8 doctors found</span>
+                <div class="d-flex align-items-center gap-2">
+                    <label class="text-muted">Sort by:</label>
+                    <select class="form-select form-select-sm bg-transparent text-muted" style="width: auto;">
+                        <option>Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="doctors-wrapper">
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/medical.webp" alt="Dr. Sarah Nassar" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Sarah Nassar</h3>
+                            <p class="doctor__specialty mb-0">Pediatrician</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Arabic Family Clinic, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 200</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--danger">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/doctor (1).webp" alt="Dr. Ahmed Kamal" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Ahmed Kamal</h3>
+                            <p class="doctor__specialty mb-0">Dentist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Cairo Smile Clinic, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 200</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--light fw-bold"><i class="fas fa-hospital me-2"></i> At the Clinic</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/medical.webp" alt="Dr. Layla Hussein" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Layla Hussein</h3>
+                            <p class="doctor__specialty mb-0">Dermatologist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.3</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Nito Skin Center, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 200</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--danger">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/doctor (1).webp" alt="Dr. Omar Salah" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Omar Salah</h3>
+                            <p class="doctor__specialty mb-0">Cardiologist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.7</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Heart Cairo Center, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 250</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--light fw-bold px-4"><i class="fa-solid fa-square-check mx-2"></i>Online</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/medical.webp" alt="Dr. Hanan Magdy" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Hanan Magdy</h3>
+                            <p class="doctor__specialty mb-0">ENT Specialist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.1</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Macr City Hosptial, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 200</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--light fw-bold"><i class="fas fa-hospital me-2"></i> At the Clinic</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/doctor (1).webp" alt="Dr. Khaled Amin" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Khaled Amin</h3>
+                            <p class="doctor__specialty mb-0">Psychiatrist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.6</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> New Cairo Psychaitry Clinic, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 300</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--danger">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__detailes">
+                        <div class="doctor-card__avatar">
+                            <img src="/assets/images/patient/doctor (1).webp" alt="Dr. Khaled Amin" class="doctor__img">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor__name main-text">Dr. Khaled Amin</h3>
+                            <p class="doctor__specialty mb-0">Psychiatrist</p>
+                            <div class="doctor__rating">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9</span>
+                                <!-- <span><i class="fas fa-user-md me-1"></i> 413 reviews</span> -->
+                            </div>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary opacity-75"></i> New Cairo Psychiatry Clinic, New Cairo, Egypt</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card__pricing">
+                        <p class="doctor-card__price mb-0">EGP 300</p>
+                        <a href="select-consultation.html" class="patient-btn patient-btn--danger">Book Appointment</a>
+                    </div>
+                </div>
+            </section>
+
+            <nav aria-label="...">
+                <ul class="pagination pagination-md justify-content-center">
+                    <li class="page-item active">
+                        <a class="page-link" aria-current="page">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main><!-- End Of Main Section-->
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about d-flex flex-column justify-content-start">
+                <a href="patient-home.html">
+                    <img class="footer__logo" src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook Logo">
+                </a>
+                <div class="footer__socials mt-2">
+                    <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <p>Quick Links</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                    <li class="footer__item"><a href="#specialties" class="footer__link">Specialties</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <p>Contact Us</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item">
+                        <i class="fas fa-phone footer__icon"></i>
+                        <a href="tel:+201234567890">01234567890</a>
+                    </li>
+                    <li class="footer__item">
+                        <i class="fas fa-envelope footer__icon"></i>
+                        <a href="mailto:info@medibook.com">info@medibook.com</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </footer><!-- End Of Footer Section -->
+
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

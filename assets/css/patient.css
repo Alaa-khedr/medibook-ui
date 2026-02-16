@@ -1,0 +1,464 @@
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #EBF0F8;
+   font-family: "Inter", sans-serif;
+}
+
+i {
+   color: #116FDE !important;
+}
+
+
+
+/* #1f62c7 */
+
+/*------------------------- Patient Variables ------------------------*/
+:root{
+   --color-primary: #2b63d9;
+   --color-primary-hover: #4facfe;
+   --color-danger: #ff5e62;
+   --color-danger-hover: #e54b4f;
+   --main-text: #0f3872;
+   --icon-bg: #e6eefc;
+}
+
+/* ----------------- Patient Screens ------------------ */
+/* Home Page */
+.navbar__logo{
+    width: 200px;
+    height: 70px;
+}
+.doctor__link{
+    color: var(--color-primary);
+}
+.doctor__link:hover{
+    color: #000;
+}
+.patient-btn{
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 8px;
+    border: none;
+}
+.patient-btn--primary{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.patient-btn--primary:hover{
+    background-color: var(--color-primary-hover);
+    color: #fff;
+}
+.patient-btn--danger{
+    background-color: var(--color-danger);
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+.patient-btn--danger:hover {
+    background-color: var(--color-danger-hover);
+    color: #fff;
+    transform: translateY(-3px);
+}
+.patient-btn--light{
+    background-color: #fff;
+    color: var(--color-primary);
+    border: 1px solid #e2e8f0;
+}
+
+
+.hero{
+    padding: 150px 0px;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/assets/images/patient/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.main-text{
+    color: #0f3872;
+    font-weight: 600;
+}
+.hero__description{
+    font-size: 1.3rem;
+}
+.search-box{
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+}
+.search-box__field {
+    flex: 1 !important;
+    min-width: 0; 
+}
+.search-box__select{
+    padding: 8px 0px;
+    border-radius: 8px;
+    border-color: #ccc;
+    width: 100% !important;                
+    height: 100% !important;
+}
+
+.hero__consultation{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+.consultation__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12px;
+}
+.consult-card{
+    background-color: #fff;
+    padding: 20px 10px 10px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.icon-svg{
+    width: 50px;
+    height: 50px;
+}
+
+.consult-card__icon{
+    align-self: flex-start;
+    background-color: var(--icon-bg);
+    border-radius: 8px;
+    padding: 5px;
+}
+.steps__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+.step-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px 0px 10px 0px;
+}
+.step-card__desc{
+    text-align: center;
+}
+.step-card__icon{
+    font-size: 3rem;
+}
+.step-card__title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.specialties__wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.specialty-card{
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+.book-cta {
+    padding: 60px 0;
+}
+.book-cta__wrapper{
+    background: linear-gradient(90deg, #64a1ff , #4facfe );
+    padding: 40px 60px;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+}
+.book-cta__title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.book-cta__description {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.book-cta__feature {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 0.9rem;
+}
+.book-cta__feature-icon {
+    font-size: 1.2rem;
+}
+.book-cta__button {
+    padding: 12px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.book-cta__select {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 0.85rem;
+    color: #333;
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+.footer{
+    background-color: var(--color-primary);
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.footer__logo{
+    width: 160px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+.footer__socials i{
+    color: #fff !important;
+    font-size: 1.2rem;
+}
+.footer__item a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer__item i{
+    color: #fff !important;
+}
+
+
+.about__container{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px 60px;
+}
+.about-section__text {
+    color: #555; 
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Search Page */
+.results-page__link-item{
+    text-decoration: none;
+}
+.doctor-card{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.doctor__img{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #e2e8f0; 
+    border-radius: 50%;
+}
+.doctor-card__detailes{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.doctor__rating{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin: 10px 0px;
+}
+.doctor-card__pricing{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-self: flex-start;
+}
+.doctor__rating .rating i{
+    color: #febf2e !important;
+}
+.doctor__name{
+    font-weight: 500;
+}
+.doctor__specialty{
+    font-size: 1.3rem;
+}
+.doctor-card__price{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Booking Summary Page */
+.booking-summary{
+    margin-bottom: 100px;
+    /* width: 100%;
+    max-width: 700px;
+    margin: auto; */
+}
+.summary-card{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+.summary-card__title{
+    background-color: #f1f5f9;
+    border-radius: 12px;
+}
+.summary-divider{
+    height: 1px;
+    width: 95%;
+    margin: auto;
+    background-color: #e2e8f0;
+}
+.booking__icon{
+    width: 60px;
+    height: 60px;
+}
+.booking-details__icon{
+    width: 20px;
+    height: 20px;
+}
+.summary-card__notice {
+    background-color: #f1f5f9;
+    padding: 20px;
+    color: #64748b;
+    font-size: 1rem;
+}
+.booking__price{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Payment Method Page */
+
+/* .payment-container{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+} */
+.payment-note{
+    background-color: #f1f5f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+.payment-note__text{
+    color: #475569;
+    font-size: 1.1rem;
+}
+.online-payment__icon{
+    width: 40px;
+    height: 40px;
+}
+.offline-payment__icon{
+    width: 50px;
+    height: 50px;
+}
+.payment-card{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 200px;
+    /* width: 100%;
+    max-width: 700px;
+    margin: auto; */
+}
+.payment-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+.payment-option__content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.payment-option__subtitle{
+    color: #555;
+}
+.payment-option__input { 
+    display: none; 
+}
+.payment-option__custom-radio{
+    font-size: 1.5rem;
+}
+
+/* Complete Your Payment Page */
+.booking-card{
+    margin-bottom: 120px;
+}
+.booking-wrapper{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.payment-states{
+    margin-bottom: 100px;
+}
+.payment-states__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+.state-box{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+.state-box--loading .state-box__icon i{ 
+    color: #94a3b8 !important; 
+    font-size: 2.5rem; 
+}
+.state-box--success .state-box__icon i{ 
+    color: #22c55e !important; 
+    font-size: 2.5rem; 
+}
+.state-box--failed .state-box__icon i{ 
+    color: #ef4444 !important;  
+    font-size: 2.5rem; 
+}
+
+/* Booking Confrimation Page */
+.confirmation-card{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 120px;
+}
+.booking-confrimation__icon{
+    color: #22c55e !important; 
+    font-size: 3rem;
+}
+.confrimation-detail__text{
+    font-size: 1.1rem;
+}
+.online-consul__icon{
+    width: 25px;
+    height: 25px;
+}
+.appointment-summary{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.states__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
