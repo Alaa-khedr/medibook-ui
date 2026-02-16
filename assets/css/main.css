@@ -77,7 +77,11 @@ i {
    --admin-text-muted: #8b90a0;
 
    --admin-border-color: #d1d5db;
+
+   --color-primary: #1f62c7;
+   --color-danger: #ed424c;
 }
+
 
 
 /*start doctor signup*/
