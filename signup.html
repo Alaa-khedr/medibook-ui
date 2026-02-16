@@ -1,13 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -132,7 +128,7 @@
 
     <!-- Breadcrumb -->
     <div class="breadcrumb-wrapper">
-      <div class="container">
+    <div class="container">
         <small class="text-muted breadcrumbs">
           <a href="index.html">Home</a>
           <span>›</span>
@@ -149,20 +145,35 @@
       </div>
     </div>
 
-    <!-- Login Section -->
+    <!-- Sign Up Section -->
     <div class="container mt-5 login-section">
-      <h1 class="text-center main-title mb-4">Log In</h1>
+      <h1 class="text-center main-title mb-4">Sign Up</h1>
 
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
           <div class="card login-card p-4">
             <!-- Alert -->
             <div class="alert alert-light d-flex align-items-center gap-2">
-              <i class="bi bi-envelope-fill text-primary fs-4"></i>
+              <i class="bi bi-info-circle-fill text-primary fs-4"></i>
               <span
-                >We'll send you an email confirmation with your appointment
-                details.</span
+                >Create an account to easily view and manage your appointments
+                later.</span
               >
+            </div>
+
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Full Name</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-person-fill"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter your full name"
+                />
+              </div>
             </div>
 
             <!-- Email -->
@@ -181,7 +192,7 @@
             </div>
 
             <!-- Phone -->
-            <div class="mb-4">
+            <div class="mb-3">
               <label class="form-label fw-semibold">Phone Number</label>
               <div class="input-group">
                 <span class="input-group-text">+20</span>
@@ -193,20 +204,29 @@
               </div>
             </div>
 
-            <!-- Login Button -->
-            <button class="btn btn-main w-100 text-white mb-3">Login</button>
+            <!-- Password -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-lock-fill"></i
+                ></span>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter your password"
+                />
+              </div>
+            </div>
 
-            <div class="text-center text-muted mb-3">or</div>
+            <!-- Create Account Button -->
+            <button class="btn btn-main w-100 text-white mb-3">
+              Create Account
+            </button>
 
-            <!-- Create Account -->
-            <a href="signup.html" class="btn btn-outline-primary w-100">
-              Create an Account
-            </a>
-
-            <p class="text-center text-muted mt-2 small">
-              You can create an account later to manage your appointments
-              easily.
-            </p>
+            <div class="text-center text-muted mt-2 small">
+              Already have an account? <a href="index.html">Log in</a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,13 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Appointments</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -132,7 +128,7 @@
 
     <!-- Breadcrumb -->
     <div class="breadcrumb-wrapper">
-      <div class="container">
+    <div class="container">
         <small class="text-muted breadcrumbs">
           <a href="index.html">Home</a>
           <span>›</span>
@@ -149,68 +145,107 @@
       </div>
     </div>
 
-    <!-- Login Section -->
-    <div class="container mt-5 login-section">
-      <h1 class="text-center main-title mb-4">Log In</h1>
+    <!-- Appointment Form Section -->
+<!-- Reschedule Appointment Section -->
+  <div class="container py-5">
 
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
-          <div class="card login-card p-4">
-            <!-- Alert -->
-            <div class="alert alert-light d-flex align-items-center gap-2">
-              <i class="bi bi-envelope-fill text-primary fs-4"></i>
-              <span
-                >We'll send you an email confirmation with your appointment
-                details.</span
-              >
-            </div>
+    <h2 class="text-center mb-4 main-title fw-bold">My Appointments</h2>
 
-            <!-- Email -->
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Email</label>
-              <div class="input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-envelope"></i
-                ></span>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter your email address"
-                />
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="mb-4">
-              <label class="form-label fw-semibold">Phone Number</label>
-              <div class="input-group">
-                <span class="input-group-text">+20</span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-            </div>
-
-            <!-- Login Button -->
-            <button class="btn btn-main w-100 text-white mb-3">Login</button>
-
-            <div class="text-center text-muted mb-3">or</div>
-
-            <!-- Create Account -->
-            <a href="signup.html" class="btn btn-outline-primary w-100">
-              Create an Account
-            </a>
-
-            <p class="text-center text-muted mt-2 small">
-              You can create an account later to manage your appointments
-              easily.
-            </p>
-          </div>
-        </div>
+    <!-- Tabs -->
+    <div class="d-flex justify-content-center mb-4">
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary">
+          Upcoming <span class="badge bg-light text-primary ms-1">3</span>
+        </a>
+        <a href="#" class="btn btn-outline-primary">
+          Past
+        </a>
       </div>
     </div>
+
+    <!-- Appointment 1 -->
+    <div class="card p-4 mb-3 shadow-sm appointment-card">
+      <div class="d-flex align-items-center mb-3">
+        <img
+          src="assets/portrait-smiling-young-woman-doctor-healthcare-medical-worker-pointing-fingers-left-showing-clini.jpg"
+          class="rounded-circle me-3 doctor-img"
+          alt="Doctor"
+        />
+        <div>
+          <h6 class="mb-0">Dr. Sarah Nassar</h6>
+          <small class="text-muted">Pediatrician</small><br />
+          ⭐ 4.9 • Arabic Family Clinic
+        </div>
+        <span class="badge bg-success ms-auto">Confirmed</span>
+      </div>
+
+      <div class="text-primary mb-2">
+        <i class="bi bi-camera-video-fill me-2"></i>
+        <strong>Online Consultation</strong>
+      </div>
+
+      <div class="text-muted">
+        <i class="bi bi-calendar-event me-2"></i>
+        Thursday, April 25, 2024 – 11:00 AM
+      </div>
+    </div>
+
+    <!-- Appointment 2 -->
+    <div class="card p-4 mb-3 shadow-sm appointment-card">
+      <div class="d-flex align-items-center mb-3">
+        <img
+          src="assets/doctor-with-his-arms-crossed-white-background_1368-5790.avif"
+          class="rounded-circle me-3 doctor-img"
+          alt="Doctor"
+        />
+        <div>
+          <h6 class="mb-0">Dr. Ahmed Khaled</h6>
+          <small class="text-muted">Dermatologist</small><br />
+          ⭐ 4.8 • Care Medical Center
+        </div>
+        <span class="badge bg-success ms-auto">Confirmed</span>
+      </div>
+
+      <div class="text-primary mb-2">
+        <i class="bi bi-hospital-fill me-2"></i>
+        <strong>Clinic Visit</strong>
+      </div>
+
+      <div class="text-muted">
+        <i class="bi bi-calendar-event me-2"></i>
+        Monday, April 29, 2024 – 02:00 PM
+      </div>
+    </div>
+
+    <!-- Appointment 3 -->
+    <div class="card p-4 shadow-sm appointment-card">
+      <div class="d-flex align-items-center mb-3">
+        <img
+          src="assets/front-view-female-doctor-with-medical-mask-hairnet-posing-with-arms-crossed.jpg"
+          class="rounded-circle me-3 doctor-img"
+          alt="Doctor"
+        />
+        <div>
+          <h6 class="mb-0">Dr. Layla Hassan</h6>
+          <small class="text-muted">Psychiatrist</small><br />
+          ⭐ 5.0 • Mind Care Clinic
+        </div>
+        <span class="badge bg-warning text-dark ms-auto">Pending</span>
+      </div>
+
+      <div class="text-primary mb-2">
+        <i class="bi bi-camera-video-fill me-2"></i>
+        <strong>Online Consultation</strong>
+      </div>
+
+      <div class="text-muted">
+        <i class="bi bi-calendar-event me-2"></i>
+        Wednesday, May 1, 2024 – 06:00 PM
+      </div>
+    </div>
+
+  </div>
+
 
     <!-- Footer -->
     <footer class="main-footer">

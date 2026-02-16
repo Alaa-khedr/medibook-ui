@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Appointments</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -149,65 +145,81 @@
       </div>
     </div>
 
-    <!-- Login Section -->
-    <div class="container mt-5 login-section">
-      <h1 class="text-center main-title mb-4">Log In</h1>
+    <!-- Appointment Form Section -->
+    <div class="page-content">
+      <div class="container py-5">
+        <h2 class="text-center fw-bold mb-4">Appointment Details</h2>
 
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
-          <div class="card login-card p-4">
-            <!-- Alert -->
-            <div class="alert alert-light d-flex align-items-center gap-2">
-              <i class="bi bi-envelope-fill text-primary fs-4"></i>
-              <span
-                >We'll send you an email confirmation with your appointment
-                details.</span
-              >
+        <div class="card shadow-sm p-4 mx-auto" style="max-width: 750px">
+          <!-- Doctor Info -->
+          <div class="d-flex align-items-center mb-4">
+            <img
+              src="assets/portrait-smiling-young-woman-doctor-healthcare-medical-worker-pointing-fingers-left-showing-clini.jpg"
+              class="rounded-circle doctor-img me-3"
+              alt="Doctor"
+            />
+            <div>
+              <h5 class="mb-0">Dr. Sarah Nassar</h5>
+              <small class="text-muted">Pediatrician</small><br />
+              ⭐ 4.9 • Arabic Family Clinic
             </div>
-
-            <!-- Email -->
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Email</label>
-              <div class="input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-envelope"></i
-                ></span>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter your email address"
-                />
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="mb-4">
-              <label class="form-label fw-semibold">Phone Number</label>
-              <div class="input-group">
-                <span class="input-group-text">+20</span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-            </div>
-
-            <!-- Login Button -->
-            <button class="btn btn-main w-100 text-white mb-3">Login</button>
-
-            <div class="text-center text-muted mb-3">or</div>
-
-            <!-- Create Account -->
-            <a href="signup.html" class="btn btn-outline-primary w-100">
-              Create an Account
-            </a>
-
-            <p class="text-center text-muted mt-2 small">
-              You can create an account later to manage your appointments
-              easily.
-            </p>
+            <span class="badge bg-success ms-auto px-3 py-2">Confirmed</span>
           </div>
+
+          <!-- Details -->
+          <div class="info-row">
+            <i class="bi bi-calendar-event text-primary"></i>
+            <span>Thursday, April 25, 2024 – 11:00 AM</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-clock text-primary"></i>
+            <span>40 Minutes</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-camera-video-fill text-primary"></i>
+            <span>Online Consultation</span>
+          </div>
+
+          <div class="info-row">
+            <i class="bi bi-cash-stack text-primary"></i>
+            <strong>EGP 200</strong>
+          </div>
+
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="#" class="btn btn-danger px-4">Cancel</a>
+            <a href="#" class="btn btn-primary px-4">Reschedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CANCEL APPOINTMENT OVERLAY ===== -->
+    <div class="cancel-overlay">
+      <div class="card shadow-lg cancel-card">
+        <h5 class="text-danger fw-bold mb-3 text-center">
+          Cancel Appointment
+        </h5>
+
+        <p class="text-center mb-3">
+          Are you sure you want to cancel your appointment with
+          <strong>Dr. Sarah Nassar</strong>?
+        </p>
+
+        <div class="alert alert-warning small">
+          <strong>Refund Policy:</strong><br />
+          Cancellations made within 24 hours of the appointment time may not be
+          eligible for a full refund.
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <a href="appointments.html" class="btn btn-secondary px-4">
+            No, Keep Appointment
+          </a>
+          <a href="Reschedule_Appointment.html" class="btn btn-danger px-4">
+            Yes, Cancel Appointment
+          </a>
         </div>
       </div>
     </div>

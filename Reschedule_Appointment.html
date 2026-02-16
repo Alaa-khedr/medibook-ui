@@ -1,13 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <meta charset="UTF-8" />
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Appointment</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -132,7 +128,7 @@
 
     <!-- Breadcrumb -->
     <div class="breadcrumb-wrapper">
-      <div class="container">
+    <div class="container">
         <small class="text-muted breadcrumbs">
           <a href="index.html">Home</a>
           <span>›</span>
@@ -149,68 +145,90 @@
       </div>
     </div>
 
-    <!-- Login Section -->
-    <div class="container mt-5 login-section">
-      <h1 class="text-center main-title mb-4">Log In</h1>
+    <!-- Appointment Form Section -->
+<!-- Reschedule Appointment Section -->
+<div class="container mt-5">
+  <h1 class="text-center mb-4 main-title">Reschedule Appointment</h1>
 
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
-          <div class="card login-card p-4">
-            <!-- Alert -->
-            <div class="alert alert-light d-flex align-items-center gap-2">
-              <i class="bi bi-envelope-fill text-primary fs-4"></i>
-              <span
-                >We'll send you an email confirmation with your appointment
-                details.</span
-              >
-            </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="card p-4 shadow-sm">
 
-            <!-- Email -->
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Email</label>
-              <div class="input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-envelope"></i
-                ></span>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter your email address"
-                />
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="mb-4">
-              <label class="form-label fw-semibold">Phone Number</label>
-              <div class="input-group">
-                <span class="input-group-text">+20</span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-            </div>
-
-            <!-- Login Button -->
-            <button class="btn btn-main w-100 text-white mb-3">Login</button>
-
-            <div class="text-center text-muted mb-3">or</div>
-
-            <!-- Create Account -->
-            <a href="signup.html" class="btn btn-outline-primary w-100">
-              Create an Account
-            </a>
-
-            <p class="text-center text-muted mt-2 small">
-              You can create an account later to manage your appointments
-              easily.
-            </p>
+        <!-- Doctor Info -->
+        <div class="d-flex align-items-center mb-4">
+          <img
+            src="assets/portrait-smiling-young-woman-doctor-healthcare-medical-worker-pointing-fingers-left-showing-clini.jpg"
+            class="rounded-circle me-3"
+            alt="Doctor"
+          />
+          <div>
+            <h6 class="mb-0">Dr. Sarah Nassar</h6>
+            <small class="text-muted">Pediatrician • Arabic Family Clinic</small>
           </div>
+          <span class="badge bg-success ms-auto">Confirmed</span>
         </div>
+
+        <!-- Month -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <button class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <strong>April 2024</strong>
+          <button class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Calendar -->
+        <table class="table text-center calendar-table">
+          <thead>
+            <tr class="text-muted small">
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+            </tr>
+            <tr>
+              <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+            </tr>
+            <tr>
+              <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+              <td class="selected-day">20</td>
+            </tr>
+            <tr>
+              <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Time Slots -->
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+          <button class="btn btn-outline-secondary">09:00 AM</button>
+          <button class="btn btn-outline-secondary">09:30 AM</button>
+          <button class="btn btn-outline-secondary">10:00 AM</button>
+          <button class="btn btn-primary">11:00 AM</button>
+          <button class="btn btn-outline-secondary">11:30 AM</button>
+        </div>
+
+        <!-- Actions -->
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-outline-danger px-4">Cancel</button>
+          <button class="btn btn-primary px-4">Confirm</button>
+        </div>
+
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="main-footer">
