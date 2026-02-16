@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
+    <title>Book Appointment</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -145,35 +145,22 @@
       </div>
     </div>
 
-    <!-- Sign Up Section -->
+    <!-- Appointment Form Section -->
     <div class="container mt-5 login-section">
-      <h1 class="text-center main-title mb-4">Sign Up</h1>
+      <h1 class="text-center main-title mb-4">
+        Enter Your Details To Book Your Appointment
+      </h1>
 
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
           <div class="card login-card p-4">
             <!-- Alert -->
             <div class="alert alert-light d-flex align-items-center gap-2">
-              <i class="bi bi-info-circle-fill text-primary fs-4"></i>
+              <i class="bi bi-envelope-fill text-primary fs-4"></i>
               <span
-                >Create an account to easily view and manage your appointments
-                later.</span
+                >We will send you an email confirmation with your appointment
+                details.</span
               >
-            </div>
-
-            <!-- Name -->
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Full Name</label>
-              <div class="input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-person-fill"></i
-                ></span>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your full name"
-                />
-              </div>
             </div>
 
             <!-- Email -->
@@ -192,7 +179,7 @@
             </div>
 
             <!-- Phone -->
-            <div class="mb-3">
+            <div class="mb-4">
               <label class="form-label fw-semibold">Phone Number</label>
               <div class="input-group">
                 <span class="input-group-text">+20</span>
@@ -204,29 +191,17 @@
               </div>
             </div>
 
-            <!-- Password -->
-            <div class="mb-4">
-              <label class="form-label fw-semibold">Password</label>
-              <div class="input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-lock-fill"></i
-                ></span>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Enter your password"
-                />
-              </div>
+            <!-- Buttons -->
+            <div class="d-grid gap-2 mb-3">
+              <button class="btn btn-main text-white">Continue as a Guest</button>
+              <a href="signup.html" class="btn btn-outline-primary">
+                Create an Account
+              </a>
             </div>
 
-            <!-- Create Account Button -->
-            <button class="btn btn-main w-100 text-white mb-3">
-              Create Account
-            </button>
-
-            <div class="text-center text-muted mt-2 small">
-              Already have an account? <a href="index.html">Log in</a>
-            </div>
+            <p class="text-center text-muted mt-2 small">
+              You can create an account later to manage your appointment easily.
+            </p>
           </div>
         </div>
       </div>
