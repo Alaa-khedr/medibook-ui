@@ -4,6 +4,12 @@ variables,
 buttons,
 forms
 */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 html {
    scroll-behavior: smooth;
 }
@@ -12,21 +18,29 @@ body {
    background-color: #EBF0F8;
    font-family: "Inter", sans-serif;
    font-style: normal;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
    min-height: 100vh;
    margin: 0;
-   padding: 40px 10px;
 }
 
-h2 {
+.doctor-signup__form h2,
+.doctor-profile__setup h2,
+.consultation-setup h2,
+.availability-setup h2,
+.pricing-setup h2,
+.payment-info h2,
+.review-submit h2 {
    color: #153C79;
    text-align: center;
 }
 
-i {
-   color: #116FDE !important;
+.doctor-signup__form i,
+.doctor-profile__setup i,
+.consultation-setup i,
+.availability-setup i,
+.pricing-setup i,
+.payment-info i,
+.review-submit i {
+   color: #116FDE;
 }
 /* stepper */
 
@@ -51,12 +65,6 @@ i {
 
 .need-help {
    font-size: 14px;
-}
-
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
 }
 
 /* ======================
@@ -556,18 +564,12 @@ i {
 /* end payment info */
 /* start Review&Submit */
 .review-submit {
-   /* التنسيق الأساسي للحاوية */
    background-color: white;
    width: 100%;
    max-width: 600px;
    border-radius: 20px;
-   margin: 20px;
-   background-color: white;
-   width: 100%;
-   max-width: 600px;
-   border-radius: 20px;
+   margin: 40px auto;
    padding: 30px;
-   /* حذفنا position: absolute وكل توابعه */
    position: relative;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
