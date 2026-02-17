@@ -162,6 +162,15 @@ body {
   margin-bottom: 10px;
 }
 
+/* Appointment Cards */
+.appointment-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.appointment-card:hover {
+  box-shadow: 0 .25rem 1rem rgba(0,0,0,.15) !important;
+}
+
 /* Footer */
 .main-footer {
   background-color: #0d6efd;
