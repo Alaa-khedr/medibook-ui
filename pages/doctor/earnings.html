@@ -4,121 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediBook | Earnings Overview</title>
+    <title>Earnings Overview | MediBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            background-color: #EBF0F8;
+            font-family: 'Inter', sans-serif;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        .dashboard-header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
 
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+        .custom-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EBF0F8;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #EBF0F8;
+            font-size: 18px;
+            color: #1A1D2D;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-row {
+            background: #FAFCFF;
+            border: 1px solid #EBF0F8;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="dashboard.html">
-                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link p-0">
-                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
-                                class="avatar-md" alt="Profile">
-                        </a>
-                    </li>
-                </ul>
+    <header class="dashboard-header sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="doctor-dashboard.html"><img src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook"
+                    height="40"></a>
+            <div class="d-flex align-items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass text-secondary fs-5"></i>
+                <i class="fa-regular fa-bell text-secondary fs-4"></i>
+                <a href="settings.html"><img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="rounded-circle border" width="45" height="45"></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container py-4" style="max-width: 800px;">
+    <div class="container pb-5">
+        <a href="doctor-dashboard.html" class="text-decoration-none text-muted mb-3 d-inline-block fs-5 fw-medium">
+            <i class="fa-solid fa-chevron-left me-2"></i> Earnings Overview
+        </a>
+        <h2 class="fw-bold mb-2" style="color: #153C79;">Earnings Overview</h2>
+        <p class="text-muted fs-5 mb-4 pb-2">View a summary of your earnings.</p>
 
-        <div class="mb-4">
-            <a href="dashboard.html" class="text-decoration-none text-muted mb-2 d-inline-block fw-medium">
-                <i class="fa-solid fa-chevron-left fa-xs me-1"></i> Earnings Overview
-            </a>
-            <h4 class="fw-bold text-primary-custom">Earnings Overview</h4>
-            <p class="text-muted">View a summary of your earnings.</p>
-        </div>
-
-        <div class="custom-card mb-4">
-
-            <div class="profile-header-section mb-4">
-                <img src="https://ui-avatars.com/api/?name=Ahmed+Samir&background=random&size=200"
-                    class="profile-img-xl" alt="Dr Profile">
+        <div class="custom-card">
+            <div class="d-flex flex-column flex-md-row gap-4 align-items-md-center border-bottom pb-4 mb-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="rounded-circle border border-3 border-light shadow-sm" width="100">
                 <div>
-                    <h5 class="fw-bold mb-1">Dr. Ahmed Samir</h5>
-                    <p class="text-muted mb-1 small">+20 1012345678</p>
-                    <p class="text-muted mb-1 small">dr.ahmed.samir@email.com</p>
-                    <a href="profile.html" class="change-photo-link">Change Profile Photo</a>
+                    <h3 class="mb-2 fw-bold text-dark">Dr. Ahmed Samir</h3>
+                    <span class="text-muted fs-5 d-block">+20 1012345678</span>
+                    <span class="text-muted fs-5 d-block">dr.ahmed.samir@email.com</span>
+                    <a href="profile-management.html" class="text-decoration-none d-inline-block mt-2 fw-medium"
+                        style="color: #116FDE;">Change Profile Photo</a>
                 </div>
             </div>
 
-            <hr class="text-muted opacity-25 mb-4">
-
-            <div class="earning-list-container">
-                <div class="earning-row">
-                    <div class="earning-label">
-                        <i class="fa-solid fa-building-columns text-primary"></i> Bank
-                    </div>
-                    <div class="earning-value">
-                        12,500 EGP <i class="fa-solid fa-chevron-right text-muted fa-xs ms-2"></i>
-                    </div>
+            <div class="mb-4">
+                <div class="info-row">
+                    <span><i class="fa-solid fa-building-columns text-primary me-2"></i> Bank</span>
+                    <span class="fw-medium text-dark d-flex align-items-center">12,500 EGP <i
+                            class="fa-solid fa-chevron-right text-muted ms-3 fs-6"></i></span>
                 </div>
-
-                <div class="earning-row">
-                    <div class="earning-label">
-                        Platform Fee
-                    </div>
-                    <div class="earning-value text-negative">
-                        -2,500 EGP <i class="fa-solid fa-chevron-right text-muted fa-xs ms-2"></i>
-                    </div>
+                <div class="info-row">
+                    <span>Platform Fee</span>
+                    <span class="fw-medium text-danger d-flex align-items-center">-2,500 EGP <i
+                            class="fa-solid fa-chevron-right text-muted ms-3 fs-6"></i></span>
                 </div>
-
-                <div class="earning-row">
-                    <div class="earning-label">
-                        Account Holder
-                    </div>
-                    <div class="earning-value fw-normal text-muted fs-6">
-                        Dr. Ahmed Samir
-                    </div>
+                <div class="info-row">
+                    <span>Account Holder</span>
+                    <span class="fw-medium text-dark">Dr. Ahmed Samir</span>
                 </div>
             </div>
 
-            <div class="earning-summary-card info">
-                <div class="earning-label">
-                    <i class="fa-solid fa-coins text-warning"></i> Total Earnings
-                </div>
-                <div class="earning-value text-positive">
-                    12,500 EGP <i class="fa-solid fa-chevron-right text-muted fa-xs ms-2"></i>
-                </div>
+            <div class="highlight-row mt-4">
+                <span class="fw-medium text-dark fs-5"><i class="fa-solid fa-coins text-warning me-2"></i> Total
+                    Earnings</span>
+                <span class="fw-bold text-success fs-5 d-flex align-items-center">12,500 EGP <i
+                        class="fa-solid fa-chevron-right text-muted ms-3 fs-6"></i></span>
             </div>
-
-            <div class="earning-summary-card success">
-                <div class="earning-label">
-                    <i class="fa-solid fa-circle-check text-success"></i> Doctor's Share
-                </div>
-                <div class="earning-value text-positive">
-                    10,000 EGP <i class="fa-solid fa-chevron-right text-muted fa-xs ms-2"></i>
-                </div>
+            <div class="highlight-row">
+                <span class="fw-medium text-dark fs-5"><i class="fa-solid fa-circle-check text-success me-2"></i>
+                    Doctor's Share</span>
+                <span class="fw-bold text-success fs-5 d-flex align-items-center">10,000 EGP <i
+                        class="fa-solid fa-chevron-right text-muted ms-3 fs-6"></i></span>
             </div>
-
-            <p class="text-center text-muted small mt-4 mb-2">
-                Withdrawals are currently managed outside the system.
-            </p>
-
         </div>
 
+        <div class="text-center mt-4">
+            <p class="text-muted fs-6">Withdrawals are currently managed outside the system.</p>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

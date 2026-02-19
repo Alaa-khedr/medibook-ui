@@ -830,6 +830,15 @@ body {
     padding: 20px;
 }
 
+.pending-approval {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #EBF0F8;
+    padding: 20px;
+}
+
 /* الكارت الأبيض */
 .pending-container {
     background-color: white;

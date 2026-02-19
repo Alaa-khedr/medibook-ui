@@ -4,189 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediBook | Appointment Details</title>
+    <title>Appointment Details | MediBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            background-color: #EBF0F8;
+            font-family: 'Inter', sans-serif;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        .dashboard-header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
 
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+        .custom-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EBF0F8;
+        }
+
+        .info-box {
+            border: 1px solid #EBF0F8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            background-color: #FAFCFF;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #2E7D32;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="dashboard.html">
-                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
+    <header class="dashboard-header sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="doctor-dashboard.html">
+                <img src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link text-muted" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li class="nav-item position-relative">
-                        <a class="nav-link text-muted" href="#">
-                            <i class="fa-regular fa-bell fa-lg"></i>
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                style="font-size: 0.6rem;">2</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link p-0">
-                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
-                                class="avatar-md" alt="Profile">
-                        </a>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass text-secondary fs-5" style="cursor: pointer;"></i>
+                <i class="fa-regular fa-bell text-secondary fs-4" style="cursor: pointer;"></i>
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle border" width="45"
+                    height="45">
             </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container py-4">
-
-        <a href="appointments.html" class="text-decoration-none text-muted mb-3 d-inline-block fw-medium">
-            <i class="fa-solid fa-chevron-left fa-xs me-1"></i> Appointments
+    <div class="container pb-5">
+        <a href="appointments.html" class="text-decoration-none text-muted mb-4 d-inline-block fs-5 fw-medium">
+            <i class="fa-solid fa-chevron-left me-2"></i> Back to Appointments
         </a>
+        <h2 class="fw-bold mb-4 pb-2" style="color: #153C79;">Appointment Details</h2>
 
-        <h4 class="fw-bold mb-4">Appointment Details</h4>
-
-        <div class="custom-card mb-4">
-
-            <div class="patient-header-info d-flex align-items-center gap-3">
-                <img src="https://ui-avatars.com/api/?name=Mohamed+Abbas&background=random&size=128" class="avatar-lg"
-                    style="border:none;" alt="Patient">
+        <div class="custom-card">
+            <div class="d-flex flex-column flex-md-row gap-4 align-items-md-center mb-5 pb-4 border-bottom">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                    class="rounded-circle border border-3 border-light shadow-sm" width="100">
                 <div>
-                    <h5 class="fw-bold mb-1">Mohamed Abbas</h5>
-                    <p class="text-muted mb-1 small">+20 1012345678</p>
-                    <p class="text-muted mb-0 small">mohamed.abbas@email.com</p>
+                    <h3 class="mb-2 fw-bold text-dark">Mohamed Abbas</h3>
+                    <span class="text-muted fs-5 d-block mb-1"><i class="fa-solid fa-phone me-2 text-primary"></i> +20
+                        1012345678</span>
+                    <span class="text-muted fs-5 d-block"><i class="fa-solid fa-envelope me-2 text-primary"></i>
+                        mohamed.abbas@email.com</span>
                 </div>
             </div>
 
-            <div class="row g-3">
-                <div class="col-12">
-                    <label class="info-label">Consultation Type</label>
-                    <div class="info-display-box">
-                        <i class="fa-solid fa-video text-primary"></i>
-                        <span class="fw-medium">Online</span>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <label class="info-label">Date & Time</label>
-                    <div class="info-display-box justify-content-between">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="fa-regular fa-calendar text-primary"></i>
-                            <span class="fw-medium">Tuesday, April 30, 2024 <span class="text-muted mx-1">|</span> 11:00
-                                AM</span>
-                        </div>
-                        <span class="text-muted small d-none d-md-block">Booked on: April 28, 2024 at 2:15 PM</span>
-                    </div>
-                </div>
+            <p class="text-muted fw-bold mb-2 fs-5">Consultation Type</p>
+            <div class="info-box fw-bold text-dark d-flex align-items-center">
+                <i class="fa-solid fa-video text-primary fs-4 me-3"></i> Online Video Call
             </div>
 
-            <div class="action-bar flex-wrap gap-3">
-                <div class="d-flex align-items-center gap-2">
-                    <span class="text-muted small">Status</span>
-                    <span class="fw-bold text-success"><i class="fa-solid fa-circle fa-2xs me-1"></i> Upcoming</span>
+            <p class="text-muted fw-bold mb-2 mt-4 fs-5">Date & Time</p>
+            <div class="info-box d-flex flex-column flex-lg-row justify-content-between align-items-lg-center">
+                <div class="fw-bold text-dark mb-2 mb-lg-0 d-flex align-items-center">
+                    <i class="fa-regular fa-calendar text-primary fs-4 me-3"></i> Tuesday, April 30, 2024 | 11:00 AM
                 </div>
+                <span class="text-muted fs-6 bg-light p-2 rounded">Booked on: April 28, 2024 at 2:15 PM</span>
+            </div>
 
-                <div class="d-flex gap-2">
-                    <button class="btn btn-primary-custom px-4"><i class="fa-solid fa-video me-2"></i> Start
-                        Call</button>
-                    <button class="btn btn-outline-secondary px-3">Record Notes</button>
+            <p class="text-muted fw-bold mb-2 mt-4 fs-5">Current Status</p>
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mt-3 gap-4">
+                <div class="bg-success bg-opacity-10 px-4 py-2 rounded-pill">
+                    <span class="text-success fw-bold fs-5 d-flex align-items-center gap-2">
+                        <span class="status-dot"></span> Upcoming Appointment
+                    </span>
+                </div>
+                <div class="d-flex gap-3 w-100 w-lg-auto flex-column flex-sm-row">
+                    <button class="btn btn-primary px-5 py-3 fs-5 fw-bold w-100 w-sm-auto shadow-sm"><i
+                            class="fa-solid fa-video me-2"></i> Start Call</button>
+                    <button class="btn btn-light border px-5 py-3 fs-5 fw-bold text-muted w-100 w-sm-auto">Record
+                        Notes</button>
                 </div>
             </div>
         </div>
-
-        <h5 class="fw-bold mb-3 mt-5 text-muted small text-uppercase">Queue</h5>
-
-        <a href="#" class="appointment-link-card active text-decoration-none">
-            <div class="row align-items-center">
-                <div class="col-10 d-flex align-items-center gap-3">
-                    <img src="https://ui-avatars.com/api/?name=Mohamed+Abbas&background=random" class="avatar-md"
-                        alt="Patient">
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Mohamed Abbas</h6>
-                        <p class="text-muted small mb-1">Tues, Apr 30 | 11:00 AM</p>
-                        <span class="badge bg-primary-subtle text-primary fw-normal"><i
-                                class="fa-solid fa-video me-1"></i> Online</span>
-                        <span class="text-muted small ms-2">| Information Trixcet</span>
-                    </div>
-                </div>
-                <div class="col-2 text-end">
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-            </div>
-        </a>
-
-        <a href="#" class="appointment-link-card text-decoration-none">
-            <div class="row align-items-center">
-                <div class="col-10 d-flex align-items-center gap-3">
-                    <img src="https://ui-avatars.com/api/?name=Ahmed+Hamdy&background=random" class="avatar-md"
-                        alt="Patient">
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Ahmed Hamdy</h6>
-                        <p class="text-muted small mb-1">Wed, May 1 | 02:30 PM</p>
-                        <span class="text-muted small"><i class="fa-solid fa-location-dot text-success me-1"></i> City
-                            Medical Center</span>
-                    </div>
-                </div>
-                <div class="col-2 text-end">
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-            </div>
-        </a>
-
-        <a href="#" class="appointment-link-card text-decoration-none">
-            <div class="row align-items-center">
-                <div class="col-10 d-flex align-items-center gap-3">
-                    <img src="https://ui-avatars.com/api/?name=Nour+Eldin&background=random" class="avatar-md"
-                        alt="Patient">
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Nour Eldin</h6>
-                        <p class="text-muted small mb-1">Thu, May 3 | 5:30 PM</p>
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-primary-subtle text-primary fw-normal"><i
-                                    class="fa-solid fa-video me-1"></i> Online</span>
-                            <span class="small text-dark fw-medium">View Draft <i
-                                    class="fa-solid fa-chevron-right fa-xs ms-1"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2 text-end">
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-            </div>
-        </a>
-
-        <a href="#" class="appointment-link-card text-decoration-none">
-            <div class="row align-items-center">
-                <div class="col-10 d-flex align-items-center gap-3">
-                    <img src="https://ui-avatars.com/api/?name=Mona+Tarek&background=random" class="avatar-md"
-                        alt="Patient">
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Mona Tarek</h6>
-                        <p class="text-muted small mb-1">Sat, May 4 | 11:00 AM</p>
-                        <span class="badge bg-primary-subtle text-primary fw-normal"><i
-                                class="fa-solid fa-video me-1"></i> Online</span>
-                    </div>
-                </div>
-                <div class="col-2 text-end">
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-            </div>
-        </a>
-
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
