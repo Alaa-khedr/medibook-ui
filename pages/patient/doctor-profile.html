@@ -16,20 +16,237 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/layout.css" /> -->
+    <!-- <link rel="stylesheet" href="/assets/css/components.css" /> -->
+    <link rel="stylesheet" href="/assets/css/patient.css"/>
+    <link rel="stylesheet" href="/assets/css/responsive.css"/>
     <title>MediBook Home</title>
 
 </head>
 
 <body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="navbar__container container d-flex justify-content-between">
+            <a class="navbar__brand" href="patient-home.html">
+                <img class="navbar__logo" src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MediBook Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div class="navbar__actions d-flex flex-column flex-lg-row align-items-lg-center ms-auto">
+                        <a href="/pages/doctor/doctor-signup.html" class="doctor__link mb-3 mb-lg-0 me-lg-3 text-center">Join as a Doctor</a>
+                        
+                        <div class="d-flex gap-3 justify-content-center">
+                            <a href="index.html" class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Log in</a>
+                            <a href="signup.html" class="patient-btn patient-btn--primary flex-grow-1 flex-lg-grow-0">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><!-- End Of The Navbar Section-->
+
+    <main class="doctor-profile container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mt-4 mb-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="patient-home.html" class="results-page__link-item text-muted">Home</a></li>
+                <li class="breadcrumb-item"><a href="patient-search.html" class="results-page__link-item text-muted">Search Results</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dr. Sara Nassar</li>
+            </ol>
+        </nav>
+
+        <section class="profile-overview">
+            <h1 class="main-text mb-3">Dr. Sarah Nassar</h1>
+            <div class="profile-overview__container bg-style shadow-sm">
+                    <div class="profile-overview__avatar">
+                        <img src="/assets/images/patient/medical.webp" alt="Dr. Sarah Nassar" class="profile-overview__img">
+                    </div>
+                    <div class="profile-overview__content">
+                        <h3 class="profile-overview__name main-text">Dr. Sarah Nassar</h3>
+                        <p class="profile-overview__specialty mb-0">Pediatrician</p>
+                        <div class="profile-overview__rating d-flex gap-2 my-2">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div> 
+                            <span>4.8</span>
+                        </div>
+                        <p><i class="profile-overview__location-tag fas fa-map-marker-alt me-2 text-primary opacity-75"></i> Arabic Family Clinic, New Cairo, Egypt</p>
+                        <div class="driver"></div>
+                        <p class="profile-overview__bio-tag mt-3">
+                            Dr. Sarah Nassar is a board-certified pediatrician with over 10 years of experience specializing in child health and development.
+                        </p>
+                    </div>
+                    <div class="profile-overview__actions d-flex flex-column gap-4">
+                        <div class="profile-overview__pricing">
+                            <p class="profile-overview__amount mb-0">EGP 200</p>
+                            <p class="profile-overview__type small mb-0">per consultation</p>
+                        </div>
+
+                        <div class="profile-overview-header__trust-box p-3 d-flex-flex-column text-center">
+                            <div class="profile-overview-header__status mb-2">
+                                <i class="fa-solid fa-shield-halved profile-overview-header__icon"></i> 
+                                <span>Verified by <strong>MediBook</strong></span>
+                            </div>
+                            <div class="profile-overview-header__stats">
+                                <i class="fa-regular fa-star profile-overview-header__icon"></i> 
+                                <span>1000+ bookings</span>
+                            </div>
+                        </div>
+
+                        <a href="booking.html" class="patient-btn patient-btn--danger d-block text-center">Book Appointment</a>
+                    </div>
+                </div>
+        </section>
+
+        <section class="consultation-section shadow-sm">
+            <div class="consultation-types">
+                <div class="consultation-card">
+                    <div class="consultation-card__header">
+                        <i class="fa-solid fa-video consultation-card__icon"></i>
+                        <h4 class="consultation-card__title main-text">Online Consultation</h4>
+                    </div>
+                    <p class="consultation-card__desc">Consult with Dr. Sarah Nassar via secure video call from rhe comfort of your home.</p>
+                </div>
+                <div class="consultation-card">
+                    <div class="consultation-card__header">
+                        <i class="fas fa-hospital me-2 consultation-card__icon"></i>
+                        <h4 class="consultation-card__title main-text">Clinic Consultation (Offline)</h4>
+                    </div>
+                    <p class="consultation-card__desc">Visit Dr. Sarah Nassar at Arabic Family Clinic for traditional in-person visit.</p>
+                </div>
+            </div>
+            <div class="booking-section">
+                <div class="booking-section__header d-flex justify-content-between align-items-center">
+                    <h3 class="main-text">Select Date & Time</h3>
+                    <button class="booking-section__nav">Next Week <i class="fa-solid fa-angle-right ml-2"></i> </button>
+                </div>
+                <div class="booking-calendar shadow-sm">
+                    <button class="booking-calendar__day">
+                        <span class="booking-calendar__date">Today</span>
+                    </button>
+                    <button class="booking-calendar__day  booking-calendar__day--selected">
+                        <span class="booking-calendar__date">Apr 24</span>
+                    </button>
+                    <button class="booking-calendar__day">
+                        <span class="booking-calendar__date">Thu Apr 25</span>
+                    </button>
+                    <button class="booking-calendar__day">
+                        <span class="booking-calendar__date">Fri Apr 26</span>
+                    </button>
+                    <button class="booking-calendar__day">
+                        <span class="booking-calendar__date">Sat Apr 27</span>
+                    </button>
+                    <button class="booking-calendar__day">
+                        <span class="booking-calendar__date">Sun Apr 28</span>
+                    </button>
+                </div>
+
+                <div class="booking-slots">
+                    <div class="booking-slots__group">
+                        <button class="booking-slots__item shadow-sm">
+                            <span>10.30 AM</span>
+                            <span class="mx-3">|</span>
+                            <span>11 AM</span>
+                        </button>
+                        <button class="booking-slots__item shadow-sm">
+                            <span>11 AM</span>
+                            <span class="mx-3">|</span>
+                            <span>11.30 AM</span>
+                        </button>
+                        <button class="booking-slots__item shadow-sm">
+                            <span>12.30 PM</span>
+                            <span class="mx-3">|</span>
+                            <span>1 PM</span>
+                        </button>
+                        <button class="booking-slots__item shadow-sm" >
+                            <span>4 PM</span>
+                            <span class="mx-3">|</span>
+                            <span>4.30 PM</span>
+                        </button>
+                        <button class="booking-slots__item shadow-sm">
+                            <span>4.30 PM</span>
+                            <span class="mx-3">|</span>
+                            <span>5 PM</span>
+                        </button>
+                        <button class="booking-slots__item shadow-sm">
+                            <span>5.30 PM</span>
+                            <span class="mx-3">|</span>
+                            <span>6 PM</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-doctor bg-style d-flex gap-4 shadow-sm">
+            <div class="about-doctor__img">
+                <img src="/assets/images/patient/medical.webp" alt="Dr. Sarah Nassar" class="doctor__img">
+            </div>
+            <div class="about-doctor__content">
+                <h3 class="about-doctor__title main-text">About Dr. Sarah Nassar</h3>
+                <p class="about-doctor-desc mb-0">Dr. Sarah Nassar is a compasionte and experienced pediatrician with a medical degree from Cairo University and over 10 years of experience in child health.</p>
+                <p class="about-doctor-desc">She is known for her genile approach and dedication to his pattenis.</p>
+            </div>
+        </section>
+
+        <section class="select-doctor bg-style mb-5 shadow-sm">
+            <h3 class="select-doctor__title main-text">Select Dr. Sarah Nassar</h3>
+            <p select-doctor__desc>Dr. Sarah Nassar is a compasionate and experienced pediatrician with a medical degree from Cairo University and over 10 years of experience in child health. She is known for her geniile approach and dedication to his pattenis.</p>
+        </section>
+
+    </main>
 
 
-
-
-    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about d-flex flex-column justify-content-start">
+                <a href="patient-home.html">
+                    <img class="footer__logo" src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook Logo">
+                </a>
+                <div class="footer__socials mt-2">
+                    <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <p>Quick Links</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                    <li class="footer__item"><a href="#specialties" class="footer__link">Specialties</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <p>Contact Us</p>
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item">
+                        <i class="fas fa-phone footer__icon"></i>
+                        <a href="tel:+201234567890">01234567890</a>
+                    </li>
+                    <li class="footer__item">
+                        <i class="fas fa-envelope footer__icon"></i>
+                        <a href="mailto:info@medibook.com">info@medibook.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

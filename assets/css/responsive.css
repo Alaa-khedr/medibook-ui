@@ -40,87 +40,6 @@ media queries only
     }
 }
 
-/* ======================
-   Login Responsive
-====================== */
-@media (max-width: 576px) {
-    .admin-login__card {
-        padding: 24px;
-        border-radius: 12px;
-    }
-
-    .admin-login__title {
-        font-size: 20px;
-    }
-
-    /* patient Pages */
-    .footer__container{
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-    }
-    .doctor-card__detailes{
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 20px;
-    }
-    .states__wrapper{
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-    }
-    .state-box--success {
-        order: 1;
-    }
-    .state-box--loading {
-        order: 2;
-    }
-    .payment-states__wrapper{
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-    }
-    .payment-option{
-        flex-direction: column;
-        row-gap: 20px;
-    }
-    .payment-option__title{
-        font-size: 1rem;
-    }
-    .payment-option__subtitle{
-        font-size: 0.8rem;
-    }
-    .booking-details__row{
-        flex-direction: column;
-        row-gap: 10px;
-    }
-    .doctor-card{
-        flex-direction: column;
-        row-gap: 10px
-    }
-    .doctor-card__pricing{
-        flex-direction: column;
-        row-gap: 10px;
-    }
-    .steps__wrapper{
-        grid-template-columns: 1fr;
-        row-gap: 25px;
-    }
-    .specialties__wrapper{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .book-cta__wrapper{
-        flex-direction: column;
-        row-gap: 30px;
-    }
-    .book-cta__features{
-        flex-direction: column;
-        row-gap: 10px;
-    }
-    .consult-card{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 20px;
-    }
-}
 @media (max-width: 991px) {
     .admin-sidebar-wrapper {
         position: fixed;
@@ -141,6 +60,9 @@ media queries only
     .book-cta__wrapper{
         flex-direction: column;
         row-gap: 40px;
+    }
+    .booking-slots__group{
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }
@@ -221,6 +143,9 @@ media queries only
         flex-direction: column;
         row-gap: 40px;
     }
+    .booking-slots__group{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     /* Home Navbar */
     .navbar__actions {
@@ -231,25 +156,25 @@ media queries only
         align-items: flex-start; 
     }
     .doctor__link {
-        color: #000 !important; 
-        text-decoration: none !important; 
+        color: #000; 
+        text-decoration: none; 
         font-weight: 500;
-        margin-bottom: 0 !important; 
+        margin-bottom: 0; 
     }
     .patient-btn--primary {
-        background: none !important;
-        border: none !important;
-        color: #000 !important; 
-        padding: 0 !important;
-        text-align: left !important;
-        box-shadow: none !important;
-        text-decoration: none !important; 
-        width: auto !important;
+        background: none;
+        border: none;
+        color: #000; 
+        padding: 0;
+        text-align: left;
+        box-shadow: none;
+        text-decoration: none; 
+        width: auto;
         font-weight: 500;
     }
     .navbar__actions .d-flex.gap-3 {
         flex-direction: column; 
-        gap: 15px !important;
+        gap: 15px;
         align-items: flex-start;
         width: 100%;
     }
@@ -269,5 +194,119 @@ media queries only
     }
 }
 
+/* ======================
+   Login Responsive
+====================== */
+@media (max-width: 576px) {
+    .admin-login__card {
+        padding: 24px;
+        border-radius: 12px;
+    }
+
+    .admin-login__title {
+        font-size: 20px;
+    }
+
+    /* patient Pages */
+    .footer__container{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .doctor-card__detailes{
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .states__wrapper{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .state-box--success {
+        order: 1;
+    }
+    .state-box--loading {
+        order: 2;
+    }
+    .payment-states__wrapper{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .payment-option{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .payment-option__title{
+        font-size: 1rem;
+    }
+    .payment-option__subtitle{
+        font-size: 0.8rem;
+    }
+    .booking-details__row{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .doctor-card{
+        flex-direction: column;
+        row-gap: 10px
+    }
+    .doctor-card__pricing{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .steps__wrapper{
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+    .specialties__wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .book-cta__wrapper{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .book-cta__features{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .consult-card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .profile-overview__container{
+        flex-direction: column;
+    }
+    .consultation-types{
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
+    .consultation-card{
+        border-radius: 10px;
+    }
+    .booking-section__header{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .booking-calendar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 15px;
+    }
+    .booking-calendar__day{
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    .booking-section__nav{
+        align-self: flex-end;
+    }
+    .booking-slots__group{
+        grid-template-columns: 1fr;
+    }
+    .about-doctor{
+        flex-direction: column;
+    }
+}
 
 

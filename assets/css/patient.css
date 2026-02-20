@@ -17,7 +17,7 @@ i {
 
 /*------------------------- Patient Variables ------------------------*/
 :root{
-   --color-primary: #2b63d9;
+   --color-primary: #0d6efd;
    --color-primary-hover: #4facfe;
    --color-danger: #ff5e62;
    --color-danger-hover: #e54b4f;
@@ -285,7 +285,7 @@ i {
     column-gap: 15px;
     justify-self: flex-start;
 }
-.doctor__rating .rating i{
+.rating i{
     color: #febf2e !important;
 }
 .doctor__name{
@@ -297,6 +297,130 @@ i {
 .doctor-card__price{
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+/* Doctor Profile Page */
+.bg-style{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+.profile-overview__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 25px;
+}
+.profile-overview__avatar {
+    flex-shrink: 0; 
+}
+.profile-overview__content {
+    flex: 1; 
+}
+.profile-overview__img{
+    width:150px;
+    height: 150px;
+    border: 1px solid #e2e8f0; 
+    border-radius: 50%;
+}
+.driver{
+    height: 1px;
+    background-color: #e2e8f0;
+}
+.profile-overview-header__trust-box{
+    background-color: #f6f1fa;
+    border-radius: 8px;
+}
+.profile-overview-header__icon{
+    color: #b6a8c1 !important;
+    margin-right: 8px;
+}
+.profile-overview__amount{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.consultation-section{
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.consultation-types{
+    background: linear-gradient(to right, #caddfd , #e8e3f9 );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1px;
+}
+.consultation-card{
+    background-color: #fff;
+    padding: 30px;
+}
+div.consultation-card:first-of-type{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+div.consultation-card:last-of-type{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.consultation-card__header{
+    display: flex;
+    column-gap: 8px;
+}
+.consultation-card__icon{
+    font-size: 2rem;
+}
+.booking-section{
+    padding: 30px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.booking-section__nav{
+    background-color: transparent;
+    border-radius: 20px;
+    color: var(--color-primary);
+    border: 1px solid #e2e8f0;
+    padding: 6px 15px;
+}
+.booking-calendar{
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0px 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.booking-calendar__day{
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+.booking-calendar__day--selected,
+.booking-calendar__day:hover{
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 7px;
+}
+.booking-slots__group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 25px;
+}
+.booking-slots__item{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+}
+.booking-slots__item:hover{
+    background-color: var(--color-primary);
+    color: #fff;
 }
 
 /* Booking Summary Page */
