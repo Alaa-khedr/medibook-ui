@@ -4,201 +4,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediBook | Doctor Dashboard</title>
+    <title>Doctor Dashboard | MediBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/patient.css">
+    <style>
+        body {
+            background-color: #EBF0F8;
+            font-family: 'Inter', sans-serif;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        /* كروت متجاوبة بتفرد مع الشاشة */
+        .custom-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EBF0F8;
+        }
 
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+        .status-badge {
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .stat-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid #EBF0F8;
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary-custom {
+            background: #116FDE;
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px 28px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: #0f5abd;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* الهيدر العلوي */
+        .dashboard-header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="#">
-                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
+    <header class="dashboard-header sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="doctor-dashboard.html">
+                <img src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook" height="40">
             </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link text-muted" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li class="nav-item position-relative">
-                        <a class="nav-link text-muted" href="#">
-                            <i class="fa-regular fa-bell fa-lg"></i>
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                style="font-size: 0.6rem;">
-                                2
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link p-0">
-                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
-                                class="avatar-md" alt="Profile">
-                        </a>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass text-secondary fs-5" style="cursor: pointer;"></i>
+                <div class="position-relative" style="cursor: pointer;">
+                    <i class="fa-regular fa-bell text-secondary fs-4"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                </div>
+                <a href="settings.html"><img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="rounded-circle border" width="45" height="45" alt="Doctor"></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container py-4">
-
-        <div class="custom-card doctor-welcome-card mb-4">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <img src="https://ui-avatars.com/api/?name=Ahmed+Samir&background=random" class="avatar-lg"
-                            alt="Doctor">
-                        <div>
-                            <div class="d-flex align-items-center gap-2">
-                                <h4 class="mb-0 fw-bold">Dr. Ahmed Samir</h4>
-                                <span class="status-badge"><i class="fa-solid fa-circle fa-2xs"></i> Active</span>
-                            </div>
-                            <p class="text-muted mb-0">Cardiologist</p>
-                            <small class="text-muted"><i class="fa-solid fa-location-dot me-1"></i> City Medical
-                                Center</small>
-                        </div>
-                    </div>
-
-                    <div class="bg-primary-subtle p-3 rounded-3 mb-3">
-                        <h5 class="fw-bold text-dark">Welcome back, Dr. Ahmed!</h5>
-                        <p class="text-muted small mb-3">Your profile is under review by MediBook admin. Please complete
-                            your profile details.</p>
-                        <button class="btn btn-primary-custom">View Profile</button>
-                    </div>
-                </div>
-                <div class="col-md-4 d-none d-md-block text-end opacity-75">
-                    <i class="fa-solid fa-clipboard-list fa-8x text-primary-custom opacity-25"></i>
-                </div>
-            </div>
-        </div>
+    <div class="container pb-5">
 
         <div class="custom-card mb-4">
-            <div class="row g-4">
-                <div class="col-md-4 border-end-md">
-                    <div class="d-flex align-items-center">
-                        <div class="stat-icon-wrapper stat-icon-blue">
-                            <i class="fa-regular fa-calendar-check"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-muted mb-0">Quick Stats</h6>
-                            <h5 class="fw-bold mb-0">15 <span class="fs-6 fw-normal text-muted">Upcoming
-                                    Appointments</span></h5>
-                        </div>
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-bottom pb-4 mb-4 gap-3">
+                <div class="d-flex gap-4 align-items-center">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="rounded-circle border border-3 border-light" width="80" height="80">
+                    <div>
+                        <h3 class="mb-1 fw-bold" style="color: #153C79;">Dr. Ahmed Samir</h3>
+                        <p class="mb-0 text-muted fs-6">Cardiologist &bull; City Medical Center</p>
                     </div>
                 </div>
-                <div class="col-md-4 border-end-md">
-                    <div class="d-flex align-items-center">
-                        <div class="stat-icon-wrapper stat-icon-green">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-success mb-0">Online</h6>
-                            <h5 class="fw-bold mb-0">5 <span class="fs-6 fw-normal text-muted">Online
-                                    Consultations</span></h5>
-                        </div>
-                    </div>
+                <div class="status-badge mt-2 mt-md-0"><i class="fa-solid fa-circle me-2" style="font-size: 10px;"></i>
+                    Active Profile</div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+                <div class="text-center text-md-start">
+                    <h3 class="fw-bold mb-2" style="color: #153C79;">Welcome back, Dr. Ahmed!</h3>
+                    <p class="text-muted mb-4 fs-5">Your profile is currently under review by MediBook admin.</p>
+                    <a href="profile-management.html"
+                        class="btn-primary-custom text-decoration-none d-inline-block">View & Edit Profile</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="d-flex align-items-center">
-                        <div class="stat-icon-wrapper stat-icon-yellow">
-                            <i class="fa-solid fa-euro-sign"></i>
-                        </div>
-                        <div>
-                            <h6 class="text-warning mb-0">7,500 EGP</h6>
-                            <h5 class="fw-normal text-muted mb-0">This Month's Earnings</h5>
-                        </div>
+                <img src="/assets/images/patient/medical.webp" width="160" alt="Illustration" class="d-none d-md-block">
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-md-4">
+                <div class="stat-box">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                        <i class="fa-regular fa-calendar-check text-primary fs-3"></i>
+                        <span class="fw-bold text-dark fs-4">Quick Stats</span>
                     </div>
+                    <p class="text-muted m-0 fs-5"><strong class="text-primary fs-3 me-2">15</strong> Upcoming</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="stat-box">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                        <i class="fa-solid fa-video text-success fs-3"></i>
+                        <span class="fw-bold text-success fs-4">Online Calls</span>
+                    </div>
+                    <p class="text-muted m-0 fs-5"><strong class="text-success fs-3 me-2">5</strong> Consultations</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="stat-box">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                        <i class="fa-solid fa-coins text-warning fs-3"></i>
+                        <span class="fw-bold text-warning fs-4">7,500 EGP</span>
+                    </div>
+                    <p class="text-muted m-0 fs-5">This Month's Earnings</p>
                 </div>
             </div>
         </div>
 
-        <div class="custom-card">
+        <div>
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h5 class="fw-bold mb-0">Upcoming Appointments</h5>
-                <a href="#" class="text-decoration-none fw-bold">View All <i
-                        class="fa-solid fa-chevron-right fa-xs"></i></a>
+                <h3 class="fw-bold m-0" style="color: #153C79;">Upcoming Appointments</h3>
+                <a href="appointments.html" class="text-decoration-none text-primary fs-5 fw-medium">View All <i
+                        class="fa-solid fa-chevron-right ms-1"></i></a>
             </div>
 
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active px-4" id="pills-upcoming-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-upcoming" type="button">Upcoming</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link px-4 text-muted" id="pills-past-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-past" type="button">Past</button>
-                </li>
-            </ul>
+            <div class="d-flex gap-3 mb-4">
+                <button class="btn btn-primary rounded-pill px-5 py-2 fs-5 fw-medium">Upcoming</button>
+                <button class="btn btn-light rounded-pill px-5 py-2 fs-5 text-muted border fw-medium">Past</button>
+            </div>
 
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-upcoming" role="tabpanel">
-
-                    <div class="appointment-card">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 d-flex align-items-center gap-3 mb-3 mb-md-0">
-                                <img src="https://ui-avatars.com/api/?name=Mohamed+Abbas&background=random"
-                                    class="avatar-md" alt="Patient">
-                                <div>
-                                    <h6 class="fw-bold mb-1">Mohamed Abbas</h6>
-                                    <p class="text-muted small mb-1">Tues, Apr 30 | 11:00 AM</p>
-                                    <span class="badge bg-primary-subtle text-primary"><i
-                                            class="fa-solid fa-video me-1"></i> Online</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-md-end">
-                                <p class="text-muted small mb-2">Booked 2 days ago</p>
-                                <button class="btn btn-primary btn-sm px-3 me-2">Start Call</button>
-                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button">View
-                                    Details</button>
-                            </div>
+            <div class="custom-card mb-4 p-4">
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom pb-3 mb-3 gap-4">
+                    <div class="d-flex gap-4 align-items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle" width="70">
+                        <div>
+                            <h4 class="mb-1 fw-bold text-dark">Mohamed Abbas</h4>
+                            <span class="text-muted fs-5 d-block mb-1">Tues, Apr 30 | 11:00 AM</span>
+                            <span class="text-primary fw-bold fs-6"><i class="fa-solid fa-video me-1"></i> Online
+                                Consultation</span>
                         </div>
                     </div>
-
-                    <div class="appointment-card">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 d-flex align-items-center gap-3 mb-3 mb-md-0">
-                                <img src="https://ui-avatars.com/api/?name=Sarah+Khaled&background=random"
-                                    class="avatar-md" alt="Patient">
-                                <div>
-                                    <h6 class="fw-bold mb-1">Sarah Khaled</h6>
-                                    <p class="text-muted small mb-1">Tues, Apr 30 | 01:00 PM</p>
-                                    <span class="text-muted small"><i
-                                            class="fa-solid fa-location-dot text-success me-1"></i> City Medical
-                                        Center</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-md-end">
-                                <p class="text-muted small mb-2">Booked 3 days ago</p>
-                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button">View
-                                    Details</button>
-                            </div>
-                        </div>
-                    </div>
-
+                    <button class="btn-primary-custom w-100 w-lg-auto fs-5"><i class="fa-solid fa-video me-2"></i> Start
+                        Call</button>
                 </div>
-
-                <div class="tab-pane fade" id="pills-past" role="tabpanel">
-                    <p class="text-center text-muted py-4">No past appointments.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted fs-6">Booked 2 days ago</span>
+                    <a href="appointment-details.html" class="text-decoration-none text-primary fw-bold fs-6">View
+                        Details <i class="fa-solid fa-chevron-right ms-1"></i></a>
                 </div>
             </div>
+
+            <div class="custom-card p-4">
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom pb-3 mb-3 gap-4">
+                    <div class="d-flex gap-4 align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="70">
+                        <div>
+                            <h4 class="mb-1 fw-bold text-dark">Sarah Khaled</h4>
+                            <span class="text-muted fs-5 d-block mb-1">Tues, Apr 30 | 01:00 PM</span>
+                            <span class="text-success fw-bold fs-6"><i class="fa-solid fa-location-dot me-1"></i> City
+                                Medical Center</span>
+                        </div>
+                    </div>
+                    <a href="appointment-details.html"
+                        class="btn btn-light text-muted border px-5 py-2 fs-5 w-100 w-lg-auto fw-bold">Details <i
+                            class="fa-solid fa-chevron-right ms-1"></i></a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted fs-6">Booked 3 days ago</span>
+                </div>
+            </div>
+
         </div>
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

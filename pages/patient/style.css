@@ -1,0 +1,229 @@
+body {
+  background: linear-gradient(135deg, #f5f9ff, #eef3ff);
+  min-height: 100vh;
+}
+/* Navbar */
+
+.breadcrumb-wrapper {
+  background-color: #f8f9fc;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb-wrapper small {
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;       
+  font-weight: 600;          
+  color: #0d6efd;              
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: #0a58ca;             
+}
+
+.breadcrumbs span {
+  margin: 0 5px;               
+  color: #6c757d;             
+}
+
+.breadcrumbs strong {
+  font-weight: 700;
+  color: #212529;            
+}
+
+.login-card {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+  padding: 24px 40px;
+}
+
+.col-lg-6 {
+  flex: 0 0 auto;
+  /* width: 50%; */
+}
+
+.main-title {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.container.mt-5 {
+  margin-bottom: 80px;
+}
+
+.btn-main {
+  background-color: #2f6fed;
+  border: none;
+  height: 50px;
+  font-size: 18px;
+}
+
+.btn-main:hover {
+  background-color: #245edb;
+}
+
+/* Rescheduele booking */
+.card {
+  border-radius: 18px;
+  border: none;
+  background: #fff;
+}
+
+/* Doctor row */
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Month header */
+.month-header {
+  background: #f7f9ff;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+/* Calendar */
+.calendar-table th {
+  font-weight: 600;
+}
+
+.calendar-table td {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.calendar-table td:hover {
+  background-color: #eef3ff;
+}
+
+.calendar-table td.selected-day {
+  background-color: #4f7cff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Time slots */
+.time-slot {
+  min-width: 110px;
+  border-radius: 10px;
+}
+
+.time-slot.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 12px;
+}
+
+.cancel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ===== Cancel Card ===== */
+.cancel-card {
+  max-width: 520px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 16px;
+  border-left: 6px solid #dc3545;
+}
+
+/* ===== Background Content ===== */
+.page-content {
+  filter: blur(2px);
+}
+
+.doctor-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Appointment Cards */
+.appointment-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.appointment-card:hover {
+  box-shadow: 0 .25rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 25px 0 15px;
+}
+
+.footer-line {
+  margin: 10px 0;
+  opacity: 0.3;
+}
+
+.main-footer .small {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #dbe6ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-contact i {
+  margin-right: 8px;
+}
+
+.social-icons a {
+  margin-left: 19px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
