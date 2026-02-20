@@ -4,120 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediBook | Payment Info</title>
+    <title>Payment Info | MediBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            background-color: #EBF0F8;
+            font-family: 'Inter', sans-serif;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        .dashboard-header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
 
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+        .custom-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EBF0F8;
+            margin-bottom: 20px;
+        }
+
+        .custom-input {
+            border: 1px solid #EBF0F8;
+            border-radius: 10px;
+            background-color: #FAFCFF;
+            padding: 15px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary-custom" href="dashboard.html">
-                <i class="fa-solid fa-book-medical fa-lg"></i> MediBook
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-3">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link p-0">
-                            <img src="https://ui-avatars.com/api/?name=Dr+Ahmed&background=0D8ABC&color=fff"
-                                class="avatar-md" alt="Profile">
-                        </a>
-                    </li>
-                </ul>
+    <header class="dashboard-header sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="doctor-dashboard.html"><img src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook"
+                    height="40"></a>
+            <div class="d-flex align-items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass text-secondary fs-5"></i>
+                <i class="fa-regular fa-bell text-secondary fs-4"></i>
+                <a href="settings.html"><img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="rounded-circle border" width="45" height="45"></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container py-4" style="max-width: 800px;">
+    <div class="container pb-5">
+        <a href="doctor-dashboard.html" class="text-decoration-none text-muted mb-3 d-inline-block fs-5 fw-medium">
+            <i class="fa-solid fa-chevron-left me-2"></i> Payment Info
+        </a>
+        <h2 class="fw-bold mb-2" style="color: #153C79;">Payment Info</h2>
+        <p class="text-muted fs-5 mb-4 pb-2">Your bank account information.</p>
 
-        <div class="mb-4">
-            <a href="dashboard.html" class="text-decoration-none text-muted mb-2 d-inline-block fw-medium">
-                <i class="fa-solid fa-chevron-left fa-xs me-1"></i> Payment Info
-            </a>
-            <h4 class="fw-bold text-primary-custom">Payment Info</h4>
-            <p class="text-muted">Your bank account information.</p>
-        </div>
-
-        <div class="custom-card mb-4">
-
-            <div class="profile-header-section mb-4">
-                <img src="https://ui-avatars.com/api/?name=Ahmed+Samir&background=random&size=200"
-                    class="profile-img-xl" alt="Dr Profile">
+        <div class="custom-card">
+            <div class="d-flex flex-column flex-md-row gap-4 align-items-md-center border-bottom pb-4 mb-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="rounded-circle border border-3 border-light shadow-sm" width="100">
                 <div>
-                    <h5 class="fw-bold mb-1">Dr. Ahmed Samir</h5>
-                    <p class="text-muted mb-1 small">+20 1012345678</p>
-                    <p class="text-muted mb-1 small">dr.ahmed.samir@email.com</p>
-                    <a href="profile.html" class="change-photo-link">Change Profile Photo</a>
+                    <h3 class="mb-2 fw-bold text-dark">Dr. Ahmed Samir</h3>
+                    <span class="text-muted fs-5 d-block">+20 1012345678</span>
+                    <span class="text-muted fs-5 d-block">dr.ahmed.samir@email.com</span>
+                    <a href="profile-management.html" class="text-decoration-none d-inline-block mt-2 fw-medium"
+                        style="color: #116FDE;">Change Profile Photo</a>
                 </div>
             </div>
 
-            <form>
-                <div class="mb-3">
-                    <label class="custom-form-label">Bank Name</label>
-                    <div class="bank-select-wrapper">
-                        <i class="fa-solid fa-building-columns bank-icon"></i>
-                        <select class="form-select custom-select custom-select-with-icon">
-                            <option selected>ABC Bank</option>
-                            <option>CIB Bank</option>
-                            <option>QNB Alahli</option>
-                            <option>Banque Misr</option>
-                        </select>
+            <div class="mb-4">
+                <div class="custom-input d-flex justify-content-between align-items-center mb-4 fw-medium text-dark">
+                    <span><i class="fa-solid fa-building-columns text-primary me-2"></i> ABC Bank</span>
+                    <i class="fa-solid fa-chevron-down text-muted"></i>
+                </div>
+
+                <label class="text-muted fw-medium mb-2 ms-1">IBAN</label>
+                <input type="text" class="form-control custom-input mb-4"
+                    value="EG-00-0000-0000-0000-0000-0000-0000-0000">
+
+                <label class="text-muted fw-medium mb-2 ms-1">Account Holder</label>
+                <input type="text" class="form-control custom-input mb-4" value="Dr. Ahmed Samir">
+
+                <label class="text-muted fw-medium mb-2 ms-1">Clinic Information</label>
+                <div class="custom-input d-flex justify-content-between align-items-start">
+                    <div>
+                        <span class="d-block text-dark fw-medium mb-1">City Medical Center</span>
+                        <span class="text-muted small">123 Health St., Cairo, 11551</span>
                     </div>
+                    <i class="fa-solid fa-chevron-down text-muted"></i>
                 </div>
+            </div>
 
-                <div class="mb-3">
-                    <label class="custom-form-label">IBAN</label>
-                    <input type="text" class="form-control custom-input" value="EG-00-0000-0000-0000-0000-0000-0000"
-                        placeholder="Enter IBAN">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-form-label">Account Holder</label>
-                    <select class="form-select custom-select">
-                        <option selected>Dr. Ahmed Samir</option>
-                        <option>Joint Account</option>
-                    </select>
-                </div>
-
-                <div class="mb-4">
-                    <label class="custom-form-label">Clinic Information</label>
-                    <div class="custom-input d-flex justify-content-between align-items-center"
-                        style="background-color: #F3F4F6;">
-                        <div>
-                            <div class="fw-medium">City Medical Center</div>
-                            <div class="text-muted small">123 Health St., Cairo, 11551</div>
-                        </div>
-                        <i class="fa-solid fa-chevron-down text-muted"></i>
-                    </div>
-                </div>
-
-                <button type="button" class="btn btn-primary-custom w-100 py-3 fw-bold fs-5 shadow-sm"
-                    onclick="window.location.href='review-submit.html'">
-                    Save Changes
-                </button>
-
-            </form>
-
+            <button class="btn btn-primary w-100 py-3 fs-5 fw-bold shadow-sm" style="background: #116FDE;">Save
+                Changes</button>
         </div>
 
-        <div class="text-center text-muted small mt-4 mb-3">
-            Need help? <a href="#" class="text-decoration-none">Contact support <i
-                    class="fa-solid fa-chevron-right fa-xs"></i></a>
+        <div class="text-center mt-4">
+            <span class="text-muted">Need help?</span> <a href="#" class="text-decoration-none fw-medium"
+                style="color: #116FDE;">Contact support <i class="fa-solid fa-chevron-right ms-1"
+                    style="font-size: 12px;"></i></a>
         </div>
-
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
