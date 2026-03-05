@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var footerEl = document.getElementById("footer-placeholder");
 
     if (navbarEl) {
-        fetch("/partials/navbar.html")
+        fetch("/assets/components/navbar.html")
             .then(function (res) { return res.text(); })
             .then(function (html) {
                 navbarEl.innerHTML = html;
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (footerEl) {
-        fetch("/partials/footer.html")
+        fetch("/assets/components/footer.html")
             .then(function (res) { return res.text(); })
             .then(function (html) {
                 footerEl.innerHTML = html;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var doctorHeaderEl = document.getElementById("doctor-header-placeholder");
     if (doctorHeaderEl) {
-        fetch("/partials/doctor-header.html")
+        fetch("/assets/components/doctor-header.html")
             .then(function (res) { return res.text(); })
             .then(function (html) {
                 doctorHeaderEl.innerHTML = html;
