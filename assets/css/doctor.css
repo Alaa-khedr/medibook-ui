@@ -1,0 +1,273 @@
+/* ======================
+   Shared Footer (loaded via partial)
+====================== */
+.footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-logo {
+    width: 160px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-socials i {
+    color: #fff !important;
+    font-size: 1.2rem;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-item i {
+    color: #fff !important;
+}
+
+/* ======================
+   Doctor Dashboard Shared
+====================== */
+.dashboard-header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 40px;
+}
+
+.custom-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #EBF0F8;
+    margin-bottom: 20px;
+}
+
+/* Padding variants per page context */
+.custom-card--details {
+    padding: 40px;
+}
+
+.custom-card--settings {
+    padding: 10px 30px;
+}
+
+.custom-card--availability {
+    padding: 25px;
+}
+
+.btn-primary-custom {
+    background: #116FDE;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background: #0f5abd;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #2E7D32;
+    border-color: #2E7D32;
+}
+
+/* ======================
+   Dashboard Page
+====================== */
+.status-badge {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.stat-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #EBF0F8;
+    text-align: center;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ======================
+   Appointments Page
+====================== */
+.list-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #EBF0F8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.list-card:hover {
+    border-color: #116FDE;
+    background: #fdfdff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(17, 111, 222, 0.1);
+}
+
+/* ======================
+   Appointment Details Page
+====================== */
+.info-box {
+    border: 1px solid #EBF0F8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    background-color: #FAFCFF;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #2E7D32;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ======================
+   Earnings Page
+====================== */
+.doctor-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #EBF0F8;
+    font-size: 18px;
+    color: #1A1D2D;
+}
+
+.doctor-info-row:last-child {
+    border-bottom: none;
+}
+
+.highlight-row {
+    background: #FAFCFF;
+    border: 1px solid #EBF0F8;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ======================
+   Settings Page
+====================== */
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #EBF0F8;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+/* ======================
+   Payment Info (Dashboard)
+====================== */
+.custom-input {
+    border: 1px solid #EBF0F8;
+    border-radius: 10px;
+    background-color: #FAFCFF;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* ======================
+   Manage Availability
+====================== */
+.doctor-time-slot {
+    background: #FAFCFF;
+    border: 1px solid #EBF0F8;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-title {
+    color: #153C79;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* ======================
+   Logout Page
+====================== */
+.doctor-logout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logout-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.logout-icon-box {
+    width: 80px;
+    height: 80px;
+    background: #FAFCFF;
+    border: 2px solid #EBF0F8;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    font-size: 35px;
+    color: #dc3545;
+}

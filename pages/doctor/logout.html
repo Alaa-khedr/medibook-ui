@@ -4,68 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout | MediBook</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <style>
-        body {
-            background-color: #EBF0F8;
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .dashboard-header {
-            background: #fff;
-            padding: 15px 0;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
-            margin-bottom: 40px;
-            width: 100%;
-        }
-
-        .logout-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 50px 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-            margin: auto;
-        }
-
-        .logout-icon-box {
-            width: 80px;
-            height: 80px;
-            background: #FAFCFF;
-            border: 2px solid #EBF0F8;
-            border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 25px;
-            font-size: 35px;
-            color: #dc3545;
-        }
-    </style>
+    <link rel="icon" href="/assets/images/logos/medibook-logo-transparent.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/doctor.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <title>MediBook | Logout</title>
 </head>
 
-<body>
-    <header class="dashboard-header sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="doctor-dashboard.html"><img src="/assets/images/logos/medibook-logo-transparent.png" alt="MediBook"
-                    height="40"></a>
-            <div class="d-flex align-items-center gap-4">
-                <i class="fa-solid fa-magnifying-glass text-secondary fs-5"></i>
-                <i class="fa-regular fa-bell text-secondary fs-4"></i>
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle border" width="45"
-                    height="45">
-            </div>
-        </div>
-    </header>
+<body class="doctor-logout">
+    <div id="doctor-header-placeholder"></div>
 
     <div class="container flex-grow-1 d-flex align-items-center justify-content-center">
         <div class="logout-card">
@@ -89,6 +44,10 @@
             style="color: #116FDE;">Contact support <i class="fa-solid fa-chevron-right ms-1"
                 style="font-size: 12px;"></i></a>
     </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/load-partials.js"></script>
 </body>
 
 </html>
